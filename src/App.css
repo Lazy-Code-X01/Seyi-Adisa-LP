@@ -1,0 +1,26 @@
+.main-content {
+    padding-top: 6rem;
+    /* padding-left: 1rem; */
+  }
+
+
+  /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--body-color);
+  transition: background .3s ease;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #000000f9;
+}

@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	transition: all ease-in;
+}
+html {
+	scroll-behavior: smooth;
+}
+
+:root {
+	--header-height: 3rem;
+	--first-color: #000041;
+	--lemon-yellow: #c8a503;
+	--title-color: #fff;
+	--text-color: hsl(0, 0%, 75%);
+	--body-color: hsl(0, 0%, 2%);
+	--body-font: "Poppins", sans-serif;
+	--second-font: "Dancing Script", cursive;
+	--h2-font-size: 1.25rem;
+	--small-font-size: 0.813rem;
+	--font-semi-bold: 600;
+	--z-tooltip: 10;
+	--z-fixed: 100;
+}
+
+body {
+	/* background-color: var(--body-color); */
+	color: var(--text-color);
+	font-family: var(--body-font);
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
