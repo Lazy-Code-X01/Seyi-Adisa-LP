@@ -1,0 +1,213 @@
+.footer-container {
+	/* margin-top: 3rem; */
+	min-width: 100vw;
+	padding: 1rem;
+	background-color: var(--body-color);
+}
+
+.footer-container .footer-header {
+	height: 10vh;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	margin-bottom: 20px;
+}
+
+.footer-container .footer-header .img_container {
+}
+
+.footer-container img {
+	width: 120px;
+}
+
+.footer-container .footer-header .links {
+	display: flex;
+	gap: 20px;
+}
+
+.footer-container .footer-header .links a {
+	text-decoration: none;
+	font-size: 0.9rem;
+	font-weight: normal;
+	color: white;
+	opacity: 90%;
+}
+
+/* second_box */
+.footer-container .second_box {
+	background-color: var(--first-color);
+	background-color: #0c0c0c;
+	padding: 5rem 0;
+}
+
+.footer-container .second_box .subscribe_box {
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/* background-color: aqua; */
+}
+
+.footer-container .second_box .subscribe_content {
+	font-size: 30px;
+	line-height: 45px;
+	font-weight: 700;
+	color: #fff;
+}
+
+.footer-container .second_box .registration_box {
+	/* width: max-content; */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+	/* background-color: #000; */
+}
+
+.footer-container .second_box .registration_box .email_box {
+	max-width: 300px;
+	height: 8vh;
+	text-indent: 15px;
+	border: 1px solid rgb(59, 59, 59);
+	outline: none;
+	text-transform: lowercase;
+	background-color: transparent;
+	letter-spacing: 2px;
+	color: #f2f2f2;
+}
+
+.email_box::placeholder {
+	text-transform: capitalize;
+	letter-spacing: normal;
+}
+
+.footer-container .second_box .registration_box .email_box:focus {
+	border: 1px solid #f2f2f2;
+	transition: all 0.2s ease-in-out;
+}
+
+.footer-container .second_box .registration_box .subscribe_button {
+	max-width: 150px;
+	height: 8vh;
+	background-image: linear-gradient(
+		to right,
+		rgba(205, 198, 74, 0.913),
+		rgba(21, 40, 145, 0.93)
+	);
+
+	transition: background-image 0.3s ease, box-shadow 0.3s ease,
+		transform 0.1s ease;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	color: #fff;
+	font-weight: bold;
+	display: block;
+}
+
+.footer-container .second_box .registration_box .subscribe_button:hover {
+	background-image: linear-gradient(
+		to right,
+		rgba(21, 40, 145, 0.93),
+		rgba(205, 198, 74, 0.913)
+	);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* last_page */
+.footer-container .last_box {
+	/* width: 90%; */
+	/* height: 15vh; */
+	/* background-color: aqua; */
+	margin: auto;
+	padding-top: 30px;
+}
+
+.footer-container .last_box .value_africa {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer-container .last_box .value {
+	font-size: 0.9rem;
+	/* font-family: poppins; */
+}
+
+.footer-container .last_box .icons {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+}
+
+.footer-container .last_box .social_icon {
+	font-size: 20px;
+	color: white;
+	cursor: pointer;
+	transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-container .last_box .social_icon:hover {
+	transform: scale(1.1);
+}
+
+.social_icon:active {
+	transform: scale(0.9);
+}
+
+.social_icon:hover:nth-child(1) {
+	color: #3b5998;
+}
+
+.social_icon:hover:nth-child(2) {
+	color: #e4405f;
+}
+
+.social_icon:hover:nth-child(3) {
+	color: #1da1f2;
+}
+
+.social_icon:hover:nth-child(4) {
+	color: #0077b5;
+}
+
+.footer-container .last_box .hello {
+	font-family: poppins;
+}
+
+@media screen and (max-width: 703px) {
+	.footer-container .second_box .subscribe_box{
+		display: block;
+	}
+}
+
+@media  screen and (max-width: 489px) {
+	.footer-container .footer-header{
+		display: block;
+	}
+	.footer-container .footer-header .links{
+		display: flex;
+		flex-direction: column;
+		margin: -60px 0;
+		align-items: flex-end;
+	}
+
+}
+
+@media screen and (max-width: 379px) {
+	.footer-container .second_box .registration_box{
+		display: block;
+	}
+	.footer-container .second_box .registration_box .email_box{
+		margin: 10px 0;
+	}
+	.footer-container .footer-header .links{
+		margin: -80px 0;
+	}
+	.footer-container .last_box .value_africa{
+		display: block;
+	}
+}

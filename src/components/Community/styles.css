@@ -1,0 +1,74 @@
+.community .community-bg {
+	position: relative;
+	margin: 0 auto;
+	/* margin-top: -4em; */
+	/* max-width: 1280px; */
+	max-width: 100vw;
+	height: 100vh;
+	background-image: url("../../Assets/RID_0586.webp");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.community .community-bg::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 1;
+}
+
+.community .community-hero-content {
+	position: absolute;
+	top: 40%;
+	max-width: 700px;
+	padding: 2rem;
+
+	z-index: 2;
+}
+
+.community-hero-content .small {
+	font-weight: 500;
+	line-height: 20px;
+	color: var(--title-color);
+}
+
+.community-hero-content .title {
+	/* line-height: 64px; */
+	color: var(--title-color);
+	font-weight: 700;
+	font-size: 35px;
+}
+
+.welcome-container {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+.welcome-container .welcome-text {
+	width: 45%;
+	height: max-content;
+	/* background-color: green; */
+}
+
+.welcome-container .welcome-picture {
+	width: 45%;
+	height: 6vh;
+	background-color: green;
+}
+
+@media screen and (max-width: 400px){
+	.community-hero-content .title{
+		font-size: 25px;
+	}
+}
