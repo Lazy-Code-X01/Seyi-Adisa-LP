@@ -7,7 +7,7 @@ const WorkshopTraining = () => {
 		<div className="consulting-container">
 			<h1 className="title"> WORKSHOPS AND TRAINING </h1>
 			<div className="flex">
-				<div className="content">
+				<div className="content" data-aos="fade-right" data-aos-duration="1000">
 					<p className="descri">
 						Seyi Adisa's workshops and training programs are designed to equip
 						individuals and organizations with the skills and knowledge needed

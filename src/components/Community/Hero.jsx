@@ -5,7 +5,11 @@ const Hero = () => {
 	return (
 		<div className="community">
 			<div className="community-bg">
-				<div className="community-hero-content">
+				<div
+					className="community-hero-content"
+					data-aos="fade-up"
+					data-aos-duration="1000"
+				>
 					<p className="small">COMMUNITY</p>
 					<h1 className="title">
 						Seyi Adisa: Enhancing Community Growth with Integrated Resource

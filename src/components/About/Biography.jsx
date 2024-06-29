@@ -25,7 +25,11 @@ const Biography = () => {
 			<div className="biography-background">
 				<section className="biography_container">
 					<img src={bio1} alt="Early Career" className="bio-image" />
-					<div className={`content ${isExpanded ? "expanded" : ""}`}>
+					<div
+						className={`content ${isExpanded ? "expanded" : ""}`}
+						data-aos="fade-up"
+						data-aos-duration="1000"
+					>
 						<div className="title">
 							Meet Seyi Adisa: A Beacon of Leadership and Governance
 						</div>

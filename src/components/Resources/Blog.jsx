@@ -104,16 +104,21 @@ const Blog = () => {
 
 	return (
 		<Root>
-			<h1 className="title" style={{ color: "#232536" }}>
+			<h1 className="title all-post-title" style={{ color: "#232536" }}>
 				All Posts
 			</h1>
 			{loading ? (
 				<Box display="flex" justifyContent="center" mt={4}>
-					<CircularProgress size={"small"} sx={{ color: "000080" }} />
+					<CircularProgress color="inherit" size={'25px'} />
 				</Box>
 			) : (
 				<>
-					<Grid container spacing={4}>
+					<Grid
+						container
+						spacing={4}
+						data-aos="fade-up"
+						data-aos-duration="1000"
+					>
 						{displayedPosts.map((post, index) => (
 							<Grid item xs={12} sm={6} md={4} key={index}>
 								<CustomCard>

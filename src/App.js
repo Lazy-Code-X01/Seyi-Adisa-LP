@@ -1,6 +1,7 @@
 // src/App.jsx
 import React, { lazy, Suspense, useState, useEffect } from "react";
-// import { ThemeProvider } from "@material-ui/core";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import {
 	BrowserRouter as Router,
 	Routes,
@@ -10,15 +11,18 @@ import {
 import Navbar from "./components/Navbar/Navbar";
 import Loader from "./components/Loader/Loader";
 import useScrollToTop from "./utils/useScrollToTop";
-// import theme from "./theme";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "./App.css";
 
+// import './utils/mediaQuery.css'
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Services = lazy(() => import("./pages/Services"));
 const Resources = lazy(() => import("./pages/Resources"));
 const Community = lazy(() => import("./pages/Community"));
+
 
 const AppContent = () => {
 	const [loading, setLoading] = useState(false);
@@ -42,6 +46,10 @@ const AppContent = () => {
 			handleComplete();
 		};
 	}, [location]);
+
+	useEffect(() => {
+		AOS.init({});
+	}, []);
 
 	return (
 		<>

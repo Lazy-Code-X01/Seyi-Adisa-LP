@@ -56,12 +56,212 @@
 
 .welcome-container .welcome-text {
 	width: 45%;
-	height: max-content;
 	/* background-color: green; */
+}
+
+.welcome-text .title {
+	font-size: 30px;
+	font-weight: 400;
+	color: #232536;
+	margin-bottom: 1rem;
+}
+
+.welcome-text .description {
+	color: var(--body-color);
+	font-weight: 400;
+	line-height: 28px;
+	margin-bottom: 1rem;
 }
 
 .welcome-container .welcome-picture {
 	width: 45%;
-	height: 6vh;
-	background-color: green;
+}
+
+.welcome-container .welcome-picture img {
+	width: 100%;
+}
+
+.initiatives_container {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 2rem;
+}
+
+.initiatives_container .initiatives_container_img {
+	width: 30%;
+	height: 15rem;
+}
+
+.initiatives_container_img img {
+	width: 100%;
+	height: 100%;
+
+	border-radius: 50%;
+}
+
+.initiatives_container .initiatives_container_text {
+	width: 100%;
+}
+
+.initiatives_container_text .title {
+	color: #232536;
+	font-size: 28px;
+	line-height: 40px;
+	font-weight: 700;
+	margin-bottom: 0.4rem;
+}
+
+.initiatives_container_text .description {
+	color: var(--body-color);
+	font-weight: 400;
+	line-height: 28px;
+	margin-bottom: 1rem;
+}
+
+.initiatives_container_text .visit-button {
+	display: inline-block;
+	padding: 0.75rem 1.5rem;
+	font-size: 1rem;
+	font-weight: bold;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	background-image: linear-gradient(
+		to right,
+		rgba(205, 198, 74, 0.913),
+		rgba(21, 40, 145, 0.93)
+	);
+	font-weight: 700;
+	transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease;
+}
+
+.initiatives_container_text .visit-button:hover {
+	background-image: linear-gradient(
+		to right,
+		rgba(21, 40, 145, 0.93),
+		rgba(205, 198, 74, 0.913)
+	);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.initiatives_container_text .visit-button:active {
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+	transform: scale(0.98);
+}
+
+.socialMedia_container {
+	width: 100%;
+	padding: 3rem;
+	background-color: #0c0c0c;
+	/* margin-bottom: 3rem; */
+}
+
+.socialMedia_container .icons {
+	max-width: 1280px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 2rem;
+	margin-bottom: 0;
+}
+
+.socialMedia_container .social_icon {
+	color: white;
+	margin-bottom: 0;
+	font-size: 4rem;
+}
+
+.newsletter_container {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 80px 36px;
+	border-radius: 20px;
+	text-align: center;
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+	/* background-image: linear-gradient(
+		to bottom,
+		rgba(21, 40, 145, 0.93) 30%,
+		rgba(205, 198, 74, 0.913)
+	); */
+
+	background-color: #0c0c0c;
+}
+
+.newsletter_container .title {
+	color: white;
+	font-size: 42px;
+	font-weight: 600;
+	margin-bottom: 20px;
+	line-height: 1.3;
+}
+
+.newsletter_container .newsletter-text {
+	color: white;
+	font-size: 14px;
+	margin-bottom: 50px;
+}
+
+.newsletter_container .newsletter-form {
+	display: flex;
+	gap: 30px;
+	justify-content: center;
+	align-items: flex-end;
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+.newsletter-form .newsletter-input {
+	background: none;
+	outline: none;
+	border: none;
+
+	padding: 10px 15px;
+	color: white;
+	width: 100%;
+	border-bottom: 1px solid;
+}
+
+.newsletter-form .newsletter-btn {
+	outline: none;
+	border: none;
+	background: none;
+}
+
+.newsletter-form .newsletter-btn {
+	display: inline-block;
+	padding: 0.75rem 1.5rem;
+	font-size: 1rem;
+	font-weight: bold;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	background-image: linear-gradient(
+		to right,
+		rgba(205, 198, 74, 0.913),
+		rgba(21, 40, 145, 0.93)
+	);
+	font-weight: 700;
+	transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease;
+}
+
+.newsletter-form .newsletter-btn:hover {
+	background-image: linear-gradient(
+		to right,
+		rgba(21, 40, 145, 0.93),
+		rgba(205, 198, 74, 0.913)
+	);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.newsletter-form .newsletter-btn:active {
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+	transform: scale(0.98);
 }

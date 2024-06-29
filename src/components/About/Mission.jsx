@@ -8,7 +8,11 @@ const Mission = () => {
 				<p className="title">
 					Guiding Governance and Leadership Towards Sustainable Transformation
 				</p>
-				<p className="description">
+				<p
+					className="description"
+					data-aos="fade-right"
+					data-aos-duration="1000"
+				>
 					Seyi holds a profound belief that governance is both a privilege and a
 					sacred duty. He views his role in government as an opportunity to
 					serve God by creating positive impacts for the benefit of the people.
@@ -24,7 +28,11 @@ const Mission = () => {
 				<div className="title">
 					Pioneering New Horizons in Governance and Leadership
 				</div>
-				<p className="description">
+				<p
+					className="description"
+					data-aos="fade-left"
+					data-aos-duration="1000"
+				>
 					Furthermore, Seyi advocates for active citizen participation in
 					governance. He believes that meaningful progress can only be achieved
 					when the people engage in the governance process, contributing their

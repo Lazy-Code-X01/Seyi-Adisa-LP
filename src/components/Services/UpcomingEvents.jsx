@@ -4,7 +4,11 @@ import "./styles.css";
 
 const UpcomingEvents = () => {
 	return (
-		<section className="upcoming-events">
+		<section
+			className="upcoming-events"
+			// data-aos="fade-up"
+			// data-aos-duration="1000"
+		>
 			<div className="events-header">
 				<h2>Join Our Upcoming Events</h2>
 				<p>

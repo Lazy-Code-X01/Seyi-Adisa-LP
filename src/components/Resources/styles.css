@@ -1,3 +1,6 @@
+@import '../../utils/mediaQuery.css';
+
+
 .resources .resources-bg {
 	position: relative;
 	margin: 0 auto;

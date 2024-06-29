@@ -6,6 +6,10 @@ import WorkshopTraining from "../components/Services/WorkshopTraining";
 import Footer from "../components/Footer/Footer";
 import UpcomingEvents from "../components/Services/UpcomingEvents";
 
+
+// media query
+import '../utils/mediaQuery.css'
+
 const Services = () => {
 	return (
 		<div>

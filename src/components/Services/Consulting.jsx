@@ -7,7 +7,7 @@ const Consulting = () => {
 		<div className="consulting-container">
 			<h1 className="title"> CONSULTING SERVICES </h1>
 			<div className="flex">
-				<div className="content">
+				<div className="content" data-aos="fade-right" data-aos-duration="1000">
 					<p className="descri">
 						At the heart of Seyi Adisa's mission is a commitment to driving
 						impactful change through expert consulting services. Our offerings

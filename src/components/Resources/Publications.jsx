@@ -15,13 +15,14 @@ const Root = styled(Box)(({ theme }) => ({
 	padding: "2rem",
 	maxWidth: "1280px",
 	margin: "0 auto",
+	[theme.breakpoints.down('md')]: {
+		padding: "1rem",
+	},
 }));
 
 const CustomCard = styled(Card)(({ theme }) => ({
 	display: "flex",
-	// gap: "20px",
 	alignItems: "center",
-	// flexDirection: "column",
 	justifyContent: "space-between",
 	height: "100%",
 	borderRadius: "15px",
@@ -31,11 +32,19 @@ const CustomCard = styled(Card)(({ theme }) => ({
 	"&:hover": {
 		boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)",
 	},
+	[theme.breakpoints.down('md')]: {
+		flexDirection: "column",
+		alignItems: "flex-start",
+	},
 }));
 
 const Media = styled(CardMedia)(({ theme }) => ({
 	height: 200,
 	width: 500,
+	[theme.breakpoints.down('md')]: {
+		height: 150,
+		width: "100%",
+	},
 }));
 
 const DownloadButton = styled(Button)(({ theme }) => ({
@@ -47,6 +56,9 @@ const DownloadButton = styled(Button)(({ theme }) => ({
         rgba(21, 40, 145, 0.93)
     )`,
 	textTransform: "unset",
+	[theme.breakpoints.down('md')]: {
+		width: "100%",
+	},
 }));
 
 const Publications = () => {
@@ -126,10 +138,10 @@ const Publications = () => {
 
 	return (
 		<Root>
-			<h1 className="title" style={{ color: "#232536" }}>
+			<h1 className="title publication-title" style={{ color: "#232536" }}>
 				Publications
 			</h1>
-			<Grid container spacing={4}>
+			<Grid container spacing={4} data-aos="zoom-in" data-aos-duration="1000">
 				{displayedPublications.map((publication, index) => (
 					<Grid item xs={12} sm={6} key={index}>
 						<CustomCard>

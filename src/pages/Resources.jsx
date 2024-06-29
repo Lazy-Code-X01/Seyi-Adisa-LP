@@ -5,6 +5,9 @@ import Publications from "../components/Resources/Publications";
 import MediaAppearances from "../components/Resources/MediaAppearances";
 import Footer from "../components/Footer/Footer";
 
+
+// media query
+import '../utils/mediaQuery.css'
 const Resources = () => {
 	return (
 		<div>

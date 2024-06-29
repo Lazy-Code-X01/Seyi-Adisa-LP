@@ -4,7 +4,11 @@ const Hero = () => {
 	return (
 		<div className="services">
 			<div className="services-bg">
-				<div className="services-hero-content">
+				<div
+					className="services-hero-content"
+					data-aos="fade-up"
+					data-aos-duration="1000"
+				>
 					<p className="small">SERVICES</p>
 					<h1 className="title">
 						Seyi Adisa: Empowering Leadership and Growth Through Transformative

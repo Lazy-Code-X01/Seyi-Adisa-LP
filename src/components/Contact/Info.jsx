@@ -53,7 +53,11 @@ const Info = () => {
 					connect and explore how we can work together to achieve your goals.
 				</p>
 
-				<div className="form_info_container">
+				<div
+					className="form_info_container"
+					data-aos="fade-up"
+					data-aos-duration="1000"
+				>
 					<div className="info-card">
 						<div className="box">
 							<p className="heading">Social Presence</p>
@@ -112,6 +116,7 @@ const Info = () => {
 							}}
 						>
 							<TextField
+							fullWidth
 								sx={{
 									// change the focus color
 									"& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":

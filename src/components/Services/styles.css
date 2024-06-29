@@ -180,7 +180,7 @@
 	background-color: var(--first-color);
 	z-index: -1;
 
-	display: none;
+	/* display: none; */
 }
 
 .even_img_container::before {

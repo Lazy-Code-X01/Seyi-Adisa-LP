@@ -23,7 +23,11 @@ const Hero = () => {
 			</div>
 
 			<div className="bg ">
-				<div className="about-content">
+				<div
+					className="about-content"
+					data-aos="fade-up"
+					data-aos-duration="1000"
+				>
 					<p className="small">ABOUT</p>
 					<h1 className="title">
 						Seyi Adisa: A Journey of Visionary Leadership and Transformative

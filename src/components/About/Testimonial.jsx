@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// import { FaStar, FaRegStar } from "react-icons/fa";
+import './styles.css';
 
 const testimonials = [
 	{
@@ -41,7 +41,11 @@ const Testimonial = () => {
 	};
 
 	return (
-		<div className="testimonial-container">
+		<div
+			className="testimonial-container"
+			data-aos="fade-up"
+			data-aos-duration="1000"
+		>
 			<h2>OUR EXPERIENCE WITH SEYI</h2>
 			<Slider {...settings}>
 				{testimonials.map((testimonial, index) => (
@@ -56,13 +60,6 @@ const Testimonial = () => {
 							<p className="testimonial-profession">{testimonial.profession}</p>
 							<p className="testimonial-text">"{testimonial.text}"</p>
 						</div>
-						{/* <div className="testimonial-stars">
-							<FaStar size="1em" />
-							<FaStar size="1em" />
-							<FaStar size="1em" />
-							<FaStar size="1em" />
-							<FaRegStar size="1em" />
-						</div> */}
 					</div>
 				))}
 			</Slider>

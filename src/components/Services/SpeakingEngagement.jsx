@@ -6,11 +6,11 @@ const SpeakingEngagement = () => {
 	return (
 		<div className="consulting-container">
 			<h1 className="title even_title"> SPEAKING ENGAGEMENTS</h1>
-			<div className="flex">
+			<div className="flex speaking-flex">
 				<div className="image_container even_img_container">
 					<img src={img} alt="image" />
 				</div>
-				<div className="content">
+				<div className="content" data-aos="fade-left" data-aos-duration="1000">
 					<p className="descri">
 						Seyi Adisa is a dynamic and inspiring speaker, known for his ability
 						to engage audiences with his insights on leadership, governance, and
