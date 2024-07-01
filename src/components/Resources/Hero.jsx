@@ -12,8 +12,7 @@ const Hero = () => {
 				>
 					<p className="small">RESOURCES</p>
 					<h1 className="title">
-						Seyi Adisa: Unlocking Potential and Driving Success Through
-						Comprehensive Resource Solutions
+						Seyi Adisa: Driving Success Through Comprehensive Resource Solutions
 					</h1>
 				</div>
 			</div>

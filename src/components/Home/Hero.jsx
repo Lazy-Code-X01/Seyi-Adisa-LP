@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 import "./styles.css";
 
 const Hero = () => {
@@ -29,14 +30,19 @@ const Hero = () => {
 	return (
 		<div ref={heroRef} className={`hero container ${isFixed ? "fixed" : ""}`}>
 			<div className="hero-text" data-aos="fade-up" data-aos-duration="1000">
-				<h1>Welcome<span id="hero-to-be-hidden"> to Seyi Adisa’s official website.</span></h1>
+				<h1>
+					Welcome
+					<span id="hero-to-be-hidden"> to Seyi Adisa’s official website.</span>
+				</h1>
 				<p>
 					As a global leader in governance and leadership, Seyi is dedicated to
 					creating transformative platforms for the development of individuals,
 					communities, nations, and the continent through the power of strategic
 					collaboration and visionary leadership.
 				</p>
-				<button>Contact Us</button>
+				<NavLink to={"/contact"}>
+					<button>Contact Us</button>
+				</NavLink>
 			</div>
 		</div>
 	);

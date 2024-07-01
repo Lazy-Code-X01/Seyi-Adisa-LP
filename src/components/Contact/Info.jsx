@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
 import "./styles.css";
 import {
@@ -13,9 +13,14 @@ import {
 	Checkbox,
 	Button,
 	Typography,
+	CircularProgress,
 } from "@mui/material";
 
+import axios from "axios";
+
 import Footer from "../Footer/Footer";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const inquiryOptions = [
 	{ value: "general", label: "General Inquiry" },
@@ -42,6 +47,42 @@ const referralSources = [
 ];
 
 const Info = () => {
+	const initialFormData = {
+		fullName: "",
+		emailAddress: "",
+		phoneNumber: "",
+		organization: "",
+		subject: "",
+		message: "",
+		contactMethod: "",
+		howHeard: "",
+	};
+
+	const [formData, setFormData] = useState(initialFormData);
+	const [loading, setLoading] = useState(false);
+
+	const handleChange = (e) => {
+		setFormData({ ...formData, [e.target.name]: e.target.value });
+	};
+
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+		setLoading(true);
+
+		try {
+			const response = await axios.post(
+				"https://seyi-adisa-backend.onrender.com/api/contact",
+				formData,
+			);
+			toast.success("Message sent successfully!");
+			setFormData(initialFormData); // Clear the form
+			setLoading(false);
+			window.scrollTo(0, 0);
+		} catch (error) {
+			toast.error("Failed to send message. Please try again.");
+			setLoading(false);
+		}
+	};
 	return (
 		<>
 			<div className="contact-us-container">
@@ -109,94 +150,75 @@ const Info = () => {
 					<div className="form-container">
 						<Box
 							component="form"
-							sx={{
-								display: "flex",
-								flexDirection: "column",
-								gap: 2,
-							}}
+							sx={{ display: "flex", flexDirection: "column", gap: 2 }}
+							onSubmit={handleSubmit}
 						>
 							<TextField
-							fullWidth
+								fullWidth
 								sx={{
-									// change the focus color
 									"& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
-										{
-											borderColor: "#000041",
-										},
-									// the label color
-									"& .MuiInputLabel-outlined.Mui-focused": {
-										color: "#000041",
-									},
+										{ borderColor: "#000041" },
+									"& .MuiInputLabel-outlined.Mui-focused": { color: "#000041" },
 								}}
 								label="Full Name"
 								variant="outlined"
 								required
+								name="fullName"
+								value={formData.fullName}
+								onChange={handleChange}
 							/>
 							<TextField
 								sx={{
-									// change the focus color
 									"& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
-										{
-											borderColor: "#000041",
-										},
-									// the label color
-									"& .MuiInputLabel-outlined.Mui-focused": {
-										color: "#000041",
-									},
+										{ borderColor: "#000041" },
+									"& .MuiInputLabel-outlined.Mui-focused": { color: "#000041" },
 								}}
 								label="Email Address"
 								variant="outlined"
 								required
 								type="email"
+								name="emailAddress"
+								value={formData.emailAddress}
+								onChange={handleChange}
 							/>
 							<TextField
 								sx={{
-									// change the focus color
 									"& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
-										{
-											borderColor: "#000041",
-										},
-									// the label color
-									"& .MuiInputLabel-outlined.Mui-focused": {
-										color: "#000041",
-									},
+										{ borderColor: "#000041" },
+									"& .MuiInputLabel-outlined.Mui-focused": { color: "#000041" },
 								}}
 								label="Phone Number"
 								variant="outlined"
 								type="tel"
+								name="phoneNumber"
+								value={formData.phoneNumber}
+								onChange={handleChange}
 							/>
 							<TextField
 								sx={{
-									// change the focus color
 									"& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
-										{
-											borderColor: "#000041",
-										},
-									// the label color
-									"& .MuiInputLabel-outlined.Mui-focused": {
-										color: "#000041",
-									},
+										{ borderColor: "#000041" },
+									"& .MuiInputLabel-outlined.Mui-focused": { color: "#000041" },
 								}}
 								label="Organization/Company"
 								variant="outlined"
+								name="organization"
+								value={formData.organization}
+								onChange={handleChange}
 							/>
-
 							<TextField
 								select
 								label="Subject of Inquiry"
 								variant="outlined"
 								required
 								sx={{
-									// change the focus color
 									"& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
-										{
-											borderColor: "#000041",
-										},
-									// the label color
-									"& .MuiInputLabel-outlined.Mui-focused": {
-										color: "#000041",
-									},
+										{ borderColor: "#000041" },
+									"& .MuiInputLabel-outlined.Mui-focused": { color: "#000041" },
 								}}
+								name="subject"
+								value={formData.subject}
+								onChange={handleChange}
 							>
 								{inquiryOptions.map((option) => (
 									<MenuItem key={option.value} value={option.value}>
@@ -204,18 +226,11 @@ const Info = () => {
 									</MenuItem>
 								))}
 							</TextField>
-
 							<TextField
 								sx={{
-									// change the focus color
 									"& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
-										{
-											borderColor: "#000041",
-										},
-									// the label color
-									"& .MuiInputLabel-outlined.Mui-focused": {
-										color: "#000041",
-									},
+										{ borderColor: "#000041" },
+									"& .MuiInputLabel-outlined.Mui-focused": { color: "#000041" },
 								}}
 								label="Message"
 								variant="outlined"
@@ -223,39 +238,42 @@ const Info = () => {
 								rows={4}
 								placeholder="Please provide details about your inquiry."
 								required
+								name="message"
+								value={formData.message}
+								onChange={handleChange}
 							/>
-
-							{/* <FormControl component="fieldset">
-							<FormLabel component="legend">
-								Preferred Method of Contact
-							</FormLabel>
-							<RadioGroup row>
-								{contactMethods.map((method) => (
-									<FormControlLabel
-										key={method.value}
-										value={method.value}
-										control={<Radio />}
-										label={method.label}
-									/>
+							<TextField
+								select
+								label="Preferred Method of Contact"
+								variant="outlined"
+								required
+								sx={{
+									"& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
+										{ borderColor: "#000041" },
+									"& .MuiInputLabel-outlined.Mui-focused": { color: "#000041" },
+								}}
+								name="contactMethod"
+								value={formData.contactMethod}
+								onChange={handleChange}
+							>
+								{contactMethods.map((option) => (
+									<MenuItem key={option.value} value={option.value}>
+										{option.label}
+									</MenuItem>
 								))}
-							</RadioGroup>
-						</FormControl> */}
-
+							</TextField>
 							<TextField
 								select
 								label="How Did You Hear About Us?"
 								variant="outlined"
 								sx={{
-									// change the focus color
 									"& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
-										{
-											borderColor: "#000041",
-										},
-									// the label color
-									"& .MuiInputLabel-outlined.Mui-focused": {
-										color: "#000041",
-									},
+										{ borderColor: "#000041" },
+									"& .MuiInputLabel-outlined.Mui-focused": { color: "#000041" },
 								}}
+								name="howHeard"
+								value={formData.howHeard}
+								onChange={handleChange}
 							>
 								{referralSources.map((source) => (
 									<MenuItem key={source.value} value={source.value}>
@@ -263,31 +281,24 @@ const Info = () => {
 									</MenuItem>
 								))}
 							</TextField>
-							{/* 
-						<FormControlLabel
-							control={<Checkbox />}
-							label="Yes, I would like to receive updates and newsletters."
-						/> */}
-
-							{/* Replace with actual CAPTCHA or reCAPTCHA component */}
 							<Typography variant="body2" color="textSecondary">
 								[CAPTCHA or reCAPTCHA]
 							</Typography>
-
 							<Button
 								sx={{
 									backgroundColor: "#000041",
 									fontWeight: "700",
-									"&:hover": {
-										backgroundColor: "#000080",
-									},
+									"&:hover": { backgroundColor: "#000080" },
 								}}
 								variant="contained"
 								color="primary"
 								type="submit"
+								disabled={loading}
 							>
-								Submit
+								{loading ? <CircularProgress size={"24px"} /> : "Submit"}
 							</Button>
+
+							<ToastContainer />
 						</Box>
 					</div>
 				</div>

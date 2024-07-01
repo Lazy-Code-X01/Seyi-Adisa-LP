@@ -3,6 +3,8 @@ import Slider from "react-slick";
 import YouTube from "react-youtube";
 import { Box, Button } from "@mui/material";
 import { styled } from "@mui/system";
+import { FaPlay } from "react-icons/fa";
+import { FaTimes } from "react-icons/fa";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -46,6 +48,49 @@ const PlayButton = styled(Button)(({ theme }) => ({
 		backgroundColor: "rgba(0, 0, 0, 0.7)",
 	},
 }));
+
+const PlayIconContainer = styled(Box)`
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 50%;
+	padding: 10px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	&:hover {
+		background-color: rgba(0, 0, 0, 0.7);
+	}
+`;
+
+const PlayIcon = styled(FaPlay)`
+	color: #fff;
+	font-size: 25px;
+`;
+
+const CloseIconContainer = styled(Box)`
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 50%;
+	padding: 8px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	&:hover {
+		background-color: rgba(0, 0, 0, 0.7);
+	}
+`;
+
+const CloseIcon = styled(FaTimes)`
+	color: red;
+	font-size: 20px;
+`;
 
 const CustomArrow = styled(Button)(({ theme }) => ({
 	position: "absolute",
@@ -142,7 +187,10 @@ const MediaAppearances = () => {
 								)}/hqdefault.jpg`}
 								alt={media.title}
 							/>
-							<PlayButton variant="contained">Play</PlayButton>
+							{/* <PlayButton variant="contained">Play</PlayButton> */}
+							<PlayIconContainer>
+								<PlayIcon />
+							</PlayIconContainer>
 						</VideoThumbnail>
 					</VideoCard>
 				))}
@@ -171,21 +219,9 @@ const MediaAppearances = () => {
 								},
 							}}
 						/>
-						<Button
-							variant="contained"
-							onClick={handleCloseVideo}
-							sx={{
-								position: "absolute",
-								top: 8,
-								right: 8,
-								backgroundColor: "rgba(0, 0, 0, 0.5)",
-								"&:hover": {
-									backgroundColor: "rgba(0, 0, 0, 0.7)",
-								},
-							}}
-						>
-							Close
-						</Button>
+						<CloseIconContainer onClick={handleCloseVideo}>
+							<CloseIcon />
+						</CloseIconContainer>
 					</Box>
 				</Box>
 			)}

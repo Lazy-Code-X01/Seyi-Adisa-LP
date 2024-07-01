@@ -1,4 +1,4 @@
-@import '../../utils/mediaQuery.css';
+@import "../../utils/mediaQuery.css";
 
 .hero {
 	/* margin-top: 0.3rem; */
@@ -32,10 +32,10 @@
 	max-width: 950px;
 	text-align: center;
 
-
 	display: flex;
 	align-items: center;
 	flex-direction: column;
+	z-index: 2;
 	/* gap: .8rem; */
 }
 
@@ -64,13 +64,16 @@
 	cursor: pointer;
 	width: max-content;
 	color: var(--title-color);
-	background-image: linear-gradient(
+	/* background-image: linear-gradient(
 		to right,
 		rgba(205, 198, 74, 0.913),
 		rgba(21, 40, 145, 0.93)
-	);
+	); */
 
-	transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease;
+	/* HSA suggested a fill color instead */
+	background: var(--first-color);
+	transition: background-image 0.3s ease, box-shadow 0.3s ease,
+		transform 0.1s ease;
 }
 
 .hero-text button:hover {

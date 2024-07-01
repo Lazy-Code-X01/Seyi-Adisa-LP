@@ -1,5 +1,4 @@
-@import '../../utils/mediaQuery.css';
-
+@import "../../utils/mediaQuery.css";
 
 .resources .resources-bg {
 	position: relative;
@@ -41,7 +40,7 @@
 }
 
 .resources-hero-content .title {
-	/* line-height: 64px; */
+	line-height: 64px;
 	color: var(--title-color);
 	font-weight: 700;
 	font-size: 35px;

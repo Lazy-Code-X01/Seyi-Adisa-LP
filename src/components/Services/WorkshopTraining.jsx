@@ -1,8 +1,13 @@
 import React from "react";
 import { FaRegCircleCheck } from "react-icons/fa6";
 import img from "../../Assets/RID_6114.jpg";
+import { useNavigate } from "react-router-dom";
 
 const WorkshopTraining = () => {
+	const navigate = useNavigate();
+	const handleNavigate = () => {
+		navigate("/contact");
+	};
 	return (
 		<div className="consulting-container">
 			<h1 className="title"> WORKSHOPS AND TRAINING </h1>
@@ -44,7 +49,9 @@ const WorkshopTraining = () => {
 						strategic roadmaps that drive growth and innovation.
 					</p> */}
 					<div className="book-seyi-container">
-						<button className="book-button">Book Seyi</button>
+						<button onClick={handleNavigate} className="book-button">
+							Book Seyi
+						</button>
 						<a href="#">Know more</a>
 					</div>
 				</div>

@@ -44,12 +44,22 @@ const ReadMoreButton = styled(Button)(({ theme }) => ({
 	alignSelf: "flex-start",
 	fontSize: "16px",
 	fontWeight: "500",
-	backgroundImage: `linear-gradient(
-        to right,
-        rgba(205, 198, 74, 0.913),
-        rgba(21, 40, 145, 0.93)
-    )`,
+	// backgroundImage: `linear-gradient(
+	//     to right,
+	//     rgba(205, 198, 74, 0.913),
+	//     rgba(21, 40, 145, 0.93)
+	// )`,
+	background: "#000041",
 	textTransform: "unset",
+
+	"&:hover": {
+		backgroundImage: `linear-gradient(
+		    to right,
+		    rgba(205, 198, 74, 0.913),
+		    rgba(21, 40, 145, 0.93)
+		)`,
+		boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)",
+	},
 }));
 
 const EllipsisTypography = styled(Typography)({
@@ -109,7 +119,7 @@ const Blog = () => {
 			</h1>
 			{loading ? (
 				<Box display="flex" justifyContent="center" mt={4}>
-					<CircularProgress color="inherit" size={'25px'} />
+					<CircularProgress color="inherit" size={"25px"} />
 				</Box>
 			) : (
 				<>

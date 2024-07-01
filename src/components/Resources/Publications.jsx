@@ -15,7 +15,7 @@ const Root = styled(Box)(({ theme }) => ({
 	padding: "2rem",
 	maxWidth: "1280px",
 	margin: "0 auto",
-	[theme.breakpoints.down('md')]: {
+	[theme.breakpoints.down("md")]: {
 		padding: "1rem",
 	},
 }));
@@ -32,7 +32,7 @@ const CustomCard = styled(Card)(({ theme }) => ({
 	"&:hover": {
 		boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)",
 	},
-	[theme.breakpoints.down('md')]: {
+	[theme.breakpoints.down("md")]: {
 		flexDirection: "column",
 		alignItems: "flex-start",
 	},
@@ -41,7 +41,7 @@ const CustomCard = styled(Card)(({ theme }) => ({
 const Media = styled(CardMedia)(({ theme }) => ({
 	height: 200,
 	width: 500,
-	[theme.breakpoints.down('md')]: {
+	[theme.breakpoints.down("md")]: {
 		height: 150,
 		width: "100%",
 	},
@@ -50,13 +50,18 @@ const Media = styled(CardMedia)(({ theme }) => ({
 const DownloadButton = styled(Button)(({ theme }) => ({
 	marginTop: "1rem",
 	alignSelf: "center",
-	backgroundImage: `linear-gradient(
-        to right,
-        rgba(205, 198, 74, 0.913),
-        rgba(21, 40, 145, 0.93)
-    )`,
+	background: "#000041",
 	textTransform: "unset",
-	[theme.breakpoints.down('md')]: {
+
+	"&:hover": {
+		backgroundImage: `linear-gradient(
+		    to right,
+		    rgba(205, 198, 74, 0.913),
+		    rgba(21, 40, 145, 0.93)
+		)`,
+		boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)",
+	},
+	[theme.breakpoints.down("md")]: {
 		width: "100%",
 	},
 }));

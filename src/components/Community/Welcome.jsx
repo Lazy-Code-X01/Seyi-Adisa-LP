@@ -1,8 +1,7 @@
 import React from "react";
 import "./styles.css";
 
-import img from "../../Assets/RID_6114.jpg";
-import { Button, Typography } from "@mui/material";
+import img from "../../Assets/hello-friends.jpeg";
 
 const Welcome = () => {
 	return (
