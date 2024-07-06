@@ -1,6 +1,6 @@
 import React from "react";
 import { FaRegCircleCheck } from "react-icons/fa6";
-import img from "../../Assets/RID_6114.jpg";
+import img from "../../Assets/speakingEngagement.jpg";
 import { useNavigate } from "react-router-dom";
 const SpeakingEngagement = () => {
 	// i am usingthesame classnames with consulting.jsx since it is thesame layout

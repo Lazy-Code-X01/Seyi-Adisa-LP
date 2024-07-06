@@ -2,9 +2,13 @@ import React, { useRef, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./styles.css";
 
+import bg1 from "../../Assets/home-bg-1.jpeg";
+import bg2 from "../../Assets/home-bg-2.jpeg";
+
 const Hero = () => {
-	const heroRef = useRef(null);
+	const [bgImage, setBgImage] = useState("");
 	const [isFixed, setIsFixed] = useState(false);
+	const heroRef = useRef(null);
 
 	useEffect(() => {
 		const currentHeroRef = heroRef.current;
@@ -27,18 +31,26 @@ const Hero = () => {
 		};
 	}, []);
 
+	useEffect(() => {
+		const images = [bg1, bg2];
+		const randomImage = images[Math.floor(Math.random() * images.length)];
+		setBgImage(randomImage);
+	}, []);
+
 	return (
-		<div ref={heroRef} className={`hero container ${isFixed ? "fixed" : ""}`}>
+		<div
+			ref={heroRef}
+			className={`hero container ${isFixed ? "fixed" : ""}`}
+			style={{
+				backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(21, 21, 21, 0.73)), url(${bgImage})`,
+			}}
+		>
 			<div className="hero-text" data-aos="fade-up" data-aos-duration="1000">
-				<h1>
-					Welcome
-					<span id="hero-to-be-hidden"> to Seyi Adisa’s official website.</span>
-				</h1>
+				<h1>Welcome!</h1>
 				<p>
-					As a global leader in governance and leadership, Seyi is dedicated to
-					creating transformative platforms for the development of individuals,
-					communities, nations, and the continent through the power of strategic
-					collaboration and visionary leadership.
+					Are you passionate about youth leadership, governance, and national
+					development? If so, you're in the right place. And if you're not yet,
+					we invite you to keep reading—you might just find your passion here.
 				</p>
 				<NavLink to={"/contact"}>
 					<button>Contact Us</button>

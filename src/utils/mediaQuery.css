@@ -297,7 +297,7 @@
 
 @media screen and (max-width: 430px) {
 	.hero {
-		background-position: center !important;
+		background-position: right !important;
 		background-attachment: unset !important;
 	}
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
 	Card,
 	CardContent,
@@ -8,8 +8,12 @@ import {
 	Grid,
 	Box,
 	Pagination,
+	CircularProgress,
 } from "@mui/material";
 import { styled } from "@mui/system";
+import axios from "axios";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Root = styled(Box)(({ theme }) => ({
 	padding: "2rem",
@@ -67,66 +71,9 @@ const DownloadButton = styled(Button)(({ theme }) => ({
 }));
 
 const Publications = () => {
-	const publications = [
-		{
-			title: "Parable of Politics",
-			description:
-				"Download our latest ebook ‘Parable of Politics’ for actionable insights.",
-			image:
-				"https://media.licdn.com/dms/image/C4D12AQHkrckl0U35Rw/article-cover_image-shrink_600_2000/0/1520216747376?e=2147483647&v=beta&t=DETHPXxRo4mVhDP0CnA3Bb9fuxfGmk4Rv-7ySvBljiI",
-			link: "path/to/your/ebook1.pdf",
-		},
-		{
-			title: "Governance and Leadership",
-			description:
-				"Access comprehensive research on governance and leadership.",
-			image:
-				"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg",
-			link: "path/to/your/ebook2.pdf",
-		},
-		{
-			title: "Leadership in Crisis",
-			description: "Strategies for effective leadership in times of crisis.",
-			image:
-				"https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg",
-			link: "path/to/your/ebook3.pdf",
-		},
-		{
-			title: "Future of Governance",
-			description: "Innovative approaches to governance for the future.",
-			image:
-				"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmCy16nhIbV3pI1qLYHMJKwbH2458oiC9EmA&s",
-			link: "path/to/your/ebook4.pdf",
-		},
-		{
-			title: "Ethical Leadership",
-			description: "The importance of ethics in leadership and governance.",
-			image:
-				"https://img.freepik.com/free-vector/different-multicolored-microphones_1284-17119.jpg?t=st=1718917025~exp=1718920625~hmac=68a20513a7a9fb930b32a3e8cb007488a1071a95da2fda232ed7805cea7d2904&w=360",
-			link: "path/to/your/ebook5.pdf",
-		},
-		{
-			title: "Sustainable Leadership",
-			description: "Principles and practices of sustainable leadership.",
-			image:
-				"https://img.freepik.com/free-vector/different-multicolored-microphones_1284-17119.jpg?t=st=1718917025~exp=1718920625~hmac=68a20513a7a9fb930b32a3e8cb007488a1071a95da2fda232ed7805cea7d2904&w=360",
-			link: "path/to/your/ebook6.pdf",
-		},
-		{
-			title: "Effective Team Building",
-			description: "Best practices for building and leading effective teams.",
-			image:
-				"https://img.freepik.com/free-vector/different-multicolored-microphones_1284-17119.jpg?t=st=1718917025~exp=1718920625~hmac=68a20513a7a9fb930b32a3e8cb007488a1071a95da2fda232ed7805cea7d2904&w=360",
-			link: "path/to/your/ebook7.pdf",
-		},
-		{
-			title: "Digital Transformation",
-			description: "How digital transformation is reshaping governance.",
-			image:
-				"https://img.freepik.com/free-vector/different-multicolored-microphones_1284-17119.jpg?t=st=1718917025~exp=1718920625~hmac=68a20513a7a9fb930b32a3e8cb007488a1071a95da2fda232ed7805cea7d2904&w=360",
-			link: "path/to/your/ebook8.pdf",
-		},
-	];
+	const [publications, setPublications] = useState([]);
+	const [loading, setLoading] = useState(true);
+	const [downloadLoading, setDownloadLoading] = useState({});
 
 	const [page, setPage] = useState(1);
 	const postsPerPage = 4;
@@ -141,43 +88,107 @@ const Publications = () => {
 		page * postsPerPage,
 	);
 
+	useEffect(() => {
+		const fetchPublications = async () => {
+			try {
+				setLoading(true);
+				const response = await axios.get(
+					"https://seyi-adisa-backend.onrender.com/api/publications",
+				);
+				setPublications(response.data);
+				setLoading(false);
+				// toast.success("Publications loaded successfully!");
+			} catch (error) {
+				setLoading(false);
+				toast.error("Failed to load publications.");
+			}
+		};
+		fetchPublications();
+	}, []);
+
+	const handleDownload = async (publicationId) => {
+		setDownloadLoading((prev) => ({ ...prev, [publicationId]: true }));
+		try {
+			const response = await axios.get(
+				`https://seyi-adisa-backend.onrender.com/api/publications/download/${publicationId}`,
+				{
+					responseType: "blob",
+				},
+			);
+			const url = window.URL.createObjectURL(new Blob([response.data]));
+			const link = document.createElement("a");
+			link.href = url;
+			link.setAttribute("download", `publication-${publicationId}.pdf`);
+			document.body.appendChild(link);
+			link.click();
+			link.parentNode.removeChild(link);
+			toast.success("Download successful!");
+		} catch (error) {
+			toast.error("Failed to download publication.");
+		} finally {
+			setDownloadLoading((prev) => ({ ...prev, [publicationId]: false }));
+		}
+	};
+
 	return (
 		<Root>
 			<h1 className="title publication-title" style={{ color: "#232536" }}>
 				Publications
 			</h1>
-			<Grid container spacing={4} data-aos="zoom-in" data-aos-duration="1000">
-				{displayedPublications.map((publication, index) => (
-					<Grid item xs={12} sm={6} key={index}>
-						<CustomCard>
-							<Media image={publication.image} title={publication.title} />
-							<CardContent>
-								<Typography variant="h6" component="div">
-									{publication.title}
-								</Typography>
-								<Typography variant="body2" color="text.secondary">
-									{publication.description}
-								</Typography>
-								<DownloadButton
-									variant="contained"
-									href={publication.link}
-									target="_blank"
-								>
-									Download
-								</DownloadButton>
-							</CardContent>
-						</CustomCard>
+			{loading ? (
+				<Box display="flex" justifyContent="center" mt={4}>
+					<CircularProgress color="inherit" size={"25px"} />
+				</Box>
+			) : (
+				<>
+					<Grid
+						container
+						spacing={4}
+						data-aos="zoom-in"
+						data-aos-duration="1000"
+					>
+						{displayedPublications.map((publication, index) => (
+							<Grid item xs={12} sm={6} key={index}>
+								<CustomCard>
+									<Media
+										image={`${`https://seyi-adisa-backend.onrender.com/${publication.image.replace(
+											/\\/g,
+											"/",
+										)}`}`}
+										title={publication.title}
+									/>
+									<CardContent>
+										<Typography variant="h6" component="div">
+											{publication.title}
+										</Typography>
+										<Typography variant="body2" color="text.secondary">
+											{publication.description}
+										</Typography>
+										{downloadLoading[publication._id] ? (
+											<CircularProgress />
+										) : (
+											<DownloadButton
+												variant="contained"
+												onClick={() => handleDownload(publication._id)}
+											>
+												Download
+											</DownloadButton>
+										)}
+									</CardContent>
+								</CustomCard>
+							</Grid>
+						))}
 					</Grid>
-				))}
-			</Grid>
-			<Box display="flex" justifyContent="center" mt={4}>
-				<Pagination
-					count={totalPages}
-					page={page}
-					onChange={handleChangePage}
-					// color="primary"
-				/>
-			</Box>
+					<Box display="flex" justifyContent="center" mt={4}>
+						<Pagination
+							count={totalPages}
+							page={page}
+							onChange={handleChangePage}
+						/>
+					</Box>
+				</>
+			)}
+			{/* <ToastContainer /> */}
 		</Root>
 	);
 };

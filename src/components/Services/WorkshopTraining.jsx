@@ -1,6 +1,6 @@
 import React from "react";
 import { FaRegCircleCheck } from "react-icons/fa6";
-import img from "../../Assets/RID_6114.jpg";
+import img from "../../Assets/bio1.webp";
 import { useNavigate } from "react-router-dom";
 
 const WorkshopTraining = () => {
