@@ -525,7 +525,7 @@
 
 	/* resources section */
 	.resources .resources-bg {
-		background-position: right !important;
+		background-position: left !important;
 		background-attachment: unset !important;
 	}
 
