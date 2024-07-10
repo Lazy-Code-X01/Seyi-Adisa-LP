@@ -50,7 +50,7 @@ const Hero = () => {
 				<p>
 					Are you passionate about youth leadership, governance, and national
 					development? If so, you're in the right place. And if you're not yet,
-					we invite you to keep reading—you might just find your passion here.
+					I invite you to keep reading—you might just find your passion here.
 				</p>
 				<NavLink to={"/contact"}>
 					<button>Contact Us</button>
