@@ -107,19 +107,19 @@ const MediaAppearances = () => {
 	const mediaAppearances = [
 		{
 			title: "Sustainable Governance on TVC",
-			videoLink: "https://youtu.be/EAN-PwRfJcA",
+			videoLink: "https://youtu.be/C4vwz26c9cs",
 		},
 		{
 			title: "Leadership in Crisis Podcast",
-			videoLink: "https://youtu.be/zpY_sudDEtE",
+			videoLink: "https://youtu.be/vNCM5b3kLnA",
 		},
 		{
 			title: "Future of Governance Interview",
-			videoLink: "https://youtu.be/kvymoFdjuHw",
+			videoLink: "https://youtu.be/D95hTI97pOc",
 		},
 		{
 			title: "Ethical Leadership Webinar",
-			videoLink: "https://youtu.be/PFA-RmV_wG0",
+			videoLink: "https://youtu.be/D95hTI97pOc",
 		},
 	];
 

@@ -14,6 +14,7 @@ import {
 	CircularProgress,
 } from "@mui/material";
 import { styled } from "@mui/system";
+import { useNavigate } from "react-router-dom";
 
 const Root = styled(Box)(({ theme }) => ({
 	maxWidth: "1280px",
@@ -49,15 +50,17 @@ const ReadMoreButton = styled(Button)(({ theme }) => ({
 	//     rgba(205, 198, 74, 0.913),
 	//     rgba(21, 40, 145, 0.93)
 	// )`,
-	background: "#000041",
+	background: "#7a6800",
 	textTransform: "unset",
 
 	"&:hover": {
-		backgroundImage: `linear-gradient(
-		    to right,
-		    rgba(205, 198, 74, 0.913),
-		    rgba(21, 40, 145, 0.93)
-		)`,
+		// backgroundImage: `linear-gradient(
+		//     to right,
+		//     rgba(205, 198, 74, 0.913),
+		//     rgba(21, 40, 145, 0.93)
+		// )`,
+		background: '#7a6800',
+		opacity: '90%',
 		boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)",
 	},
 }));
@@ -78,11 +81,16 @@ const DescriptionTypography = styled(Typography)({
 	lineHeight: "24px",
 });
 
+
+
+
+
 const Blog = () => {
 	const [blogPosts, setBlogPosts] = useState([]);
 	const [loading, setLoading] = useState(true);
 	const [page, setPage] = useState(1);
 	const postsPerPage = 6;
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		const fetchPosts = async () => {
@@ -111,6 +119,9 @@ const Blog = () => {
 		(page - 1) * postsPerPage,
 		page * postsPerPage,
 	);
+			const handleReadMore = (id) => {
+		navigate(`/resources/${id}`);
+	};
 
 	return (
 		<Root>
@@ -149,9 +160,9 @@ const Blog = () => {
 											{post.title}
 										</EllipsisTypography>
 										<DescriptionTypography>
-											{post.content}
+											{post.description}
 										</DescriptionTypography>
-										<ReadMoreButton variant="contained">
+										<ReadMoreButton variant="contained" onClick={() => handleReadMore(post._id)}>
 											Read More
 										</ReadMoreButton>
 									</CardContent>

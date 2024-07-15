@@ -54,15 +54,17 @@ const Media = styled(CardMedia)(({ theme }) => ({
 const DownloadButton = styled(Button)(({ theme }) => ({
 	marginTop: "1rem",
 	alignSelf: "center",
-	background: "#000041",
+	background: "#7a6800",
 	textTransform: "unset",
 
 	"&:hover": {
-		backgroundImage: `linear-gradient(
-		    to right,
-		    rgba(205, 198, 74, 0.913),
-		    rgba(21, 40, 145, 0.93)
-		)`,
+		// backgroundImage: `linear-gradient(
+		//     to right,
+		//     rgba(205, 198, 74, 0.913),
+		//     rgba(21, 40, 145, 0.93)
+		// )`,
+		background: '#7a6800',
+		opacity: '90%',
 		boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)",
 	},
 	[theme.breakpoints.down("md")]: {

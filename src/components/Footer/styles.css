@@ -97,9 +97,9 @@
 		rgba(21, 40, 145, 0.93)
 	); */
 
-	background: var(--first-color);
+	background: var(--button-color);
 
-	transition: background-image 0.3s ease, box-shadow 0.3s ease,
+	transition: opacity 0.3s ease, box-shadow 0.3s ease,
 		transform 0.1s ease;
 	outline: none;
 	border: none;
@@ -110,11 +110,12 @@
 }
 
 .footer-container .second_box .registration_box .subscribe_button:hover {
-	background-image: linear-gradient(
+	/* background-image: linear-gradient(
 		to right,
 		rgba(21, 40, 145, 0.93),
 		rgba(205, 198, 74, 0.913)
-	);
+	); */
+	opacity: 90%;
 	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 

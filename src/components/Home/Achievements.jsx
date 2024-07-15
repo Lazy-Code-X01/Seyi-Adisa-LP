@@ -6,7 +6,7 @@ import img3 from "../../Assets/Logo 3.png";
 import img4 from "../../Assets/Logo 4.png";
 import img5 from "../../Assets/Logo 5.png";
 
-import img from "../../Assets/featureddesktop-min.png";
+import img from "../../Assets/featured.png";
 
 const Achievements = () => {
 	return (

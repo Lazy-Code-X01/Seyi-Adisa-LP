@@ -6,10 +6,13 @@ const SociaMedia = () => {
 	return (
 		<div
 			className="socialMedia_container"
+			// data-aos="fade-up"
+			// data-aos-duration="1000"
+		>
+			<div className="icons" 
 			data-aos="fade-up"
 			data-aos-duration="1000"
-		>
-			<div className="icons">
+			>
 				<a
 					href="https://facebook.com"
 					target="_blank"

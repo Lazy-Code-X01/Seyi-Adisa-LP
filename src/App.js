@@ -22,6 +22,7 @@ const Contact = lazy(() => import("./pages/Contact"));
 const Services = lazy(() => import("./pages/Services"));
 const Resources = lazy(() => import("./pages/Resources"));
 const Community = lazy(() => import("./pages/Community"));
+const BlogPost = lazy(() => import("./pages/BlogPost"));
 
 
 const AppContent = () => {
@@ -62,6 +63,7 @@ const AppContent = () => {
 						<Route path="/contact" element={<Contact />} />
 						<Route path="/services" element={<Services />} />
 						<Route path="/resources" element={<Resources />} />
+						<Route path="/resources/:id" element={<BlogPost />} />
 						<Route path="/community" element={<Community />} />
 					</Routes>
 				</Suspense>

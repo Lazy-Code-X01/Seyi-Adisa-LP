@@ -41,7 +41,7 @@
 
 .nav__cta {
 	/* background-image: linear-gradient(to right,  rgba(205, 198, 74, 0.913), rgba(21, 40, 145, 0.93));; */
-	background: #000041;
+	background: var(--button-color);
 	color: var(--title-color);
 	border: none;
 	border-radius: 4px;
@@ -113,12 +113,13 @@
 }
 
 .nav__cta:hover {
-	transition: background-image 0.5s ease-in-out;
-	background-image: linear-gradient(
+	transition: opacity 0.5s ease-in-out;
+	/* background-image: linear-gradient(
 		to right,
 		rgba(21, 40, 145, 0.93),
 		rgba(205, 198, 74, 0.913)
-	);
+	); */
+	opacity: 90%;
 	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 	color: var(--title-color);
 }

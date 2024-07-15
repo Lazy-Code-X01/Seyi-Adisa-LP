@@ -92,6 +92,7 @@
 	.newsletter_container {
 		max-width: 95% !important;
 		padding: 50px 35px !important;
+		margin: 0 auto !important;
 	}
 
 	.newsletter_container .title {
@@ -193,6 +194,7 @@
 
 	.consulting-container {
 		max-width: 90% !important;
+		padding: 0 !important;
 	}
 
 	.consulting-container .flex {
@@ -291,6 +293,11 @@
 	.form-container {
 		width: 100% !important;
 	}
+
+	/* blog post */
+	.full-page{
+		max-width: 90% !important;
+	}
 }
 
 /* big mobile screen */
@@ -330,7 +337,7 @@
 	}
 
 	.achievements-content .achievement-img-container img {
-		width: 350px !important;
+		width: 300px !important;
 	}
 
 	.home-about .content h1 {
@@ -624,5 +631,24 @@
 
 	.contact-us-container .info-card {
 		flex-direction: column !important;
+	}
+
+	.full-page{
+		margin-top: 2rem !important;
+	}
+
+	.full-page .top-writing{
+		font-size: 30px !important;
+	}
+
+	.full-page .second-writing{
+		font-size: 1rem !important;
+		line-height: 28px !important;
+	}
+	
+	.full-page .content{
+		font-size: 1rem;
+		line-height: 30px !important;
+		text-align: start !important;
 	}
 }

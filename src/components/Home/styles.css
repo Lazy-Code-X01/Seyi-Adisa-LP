@@ -71,17 +71,18 @@
 	); */
 
 	/* HSA suggested a fill color instead */
-	background: var(--first-color);
-	transition: background-image 0.3s ease, box-shadow 0.3s ease,
+	background: var(--button-color);
+	transition: opacity 0.3s ease, box-shadow 0.3s ease,
 		transform 0.1s ease;
 }
 
 .hero-text button:hover {
-	background-image: linear-gradient(
+	/* background-image: linear-gradient(
 		to right,
 		rgba(21, 40, 145, 0.93),
 		rgba(205, 198, 74, 0.913)
-	);
+	); */
+	opacity: 80%;
 	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -133,11 +134,12 @@
 	gap: 2rem;
 	align-items: stretch; /* Ensure the items stretch to the same height */
 	padding: 4px 0;
-	background-image: linear-gradient(
+	/* background-image: linear-gradient(
 		46deg,
 		rgba(21, 40, 145, 0.93) 52%,
 		rgba(205, 198, 74, 0.913) 100%
-	);
+	); */
+	background-color: var(--first-color);
 }
 
 .home-about .img-container {
