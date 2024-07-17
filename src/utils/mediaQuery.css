@@ -92,7 +92,9 @@
 	.newsletter_container {
 		max-width: 95% !important;
 		padding: 50px 35px !important;
-		margin: 0 auto !important;
+		/* margin:  auto !important; */
+		margin-left: auto !important;
+		margin-right: auto !important;
 	}
 
 	.newsletter_container .title {

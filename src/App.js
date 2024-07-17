@@ -58,7 +58,7 @@ const AppContent = () => {
 			<main className="main-content">
 				<Suspense fallback={<Loader />}>
 					<Routes>
-						<Route path="/" element={<Home />} />
+						<Route path="/" element={<Home />}      />
 						<Route path="/about" element={<About />} />
 						<Route path="/contact" element={<Contact />} />
 						<Route path="/services" element={<Services />} />
@@ -72,7 +72,7 @@ const AppContent = () => {
 	);
 };
 
-const App = ({}) => {
+const App = ({ }) => {
 	return (
 		<Router>
 			<Navbar />

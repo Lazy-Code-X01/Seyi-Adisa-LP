@@ -41,7 +41,7 @@
 
 .hero-text h1 {
 	margin: 0;
-	font-size: 45px;
+	font-size: 50px;
 	font-weight: 700;
 	color: var(--title-color);
 }
@@ -52,6 +52,7 @@
 	font-weight: 500;
 	color: var(--text-color);
 	margin-bottom: 12px;
+	line-height: 1.4;
 }
 
 .hero-text button {
