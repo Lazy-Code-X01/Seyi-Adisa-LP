@@ -2,7 +2,7 @@
 	/* margin-top: 3rem; */
 	width: 100%;
 	padding: 1rem;
-	background-color: var(--body-color);
+	background-color: var(--nav-bg);
 }
 
 .footer-container .footer-header {
@@ -30,14 +30,14 @@
 	text-decoration: none;
 	font-size: 0.9rem;
 	font-weight: normal;
-	color: white;
+	color: var(--body-color);
 	opacity: 90%;
 }
 
 /* second_box */
 .footer-container .second_box {
-	background-color: var(--first-color);
-	background-color: #0c0c0c;
+	background-color: #f5f5f5;
+	
 	padding: 5rem 0;
 }
 
@@ -54,7 +54,7 @@
 	font-size: 30px;
 	line-height: 45px;
 	font-weight: 700;
-	color: #fff;
+	color: var(--body-color);
 }
 
 .footer-container .second_box .registration_box {
@@ -75,7 +75,7 @@
 	text-transform: lowercase;
 	background-color: transparent;
 	letter-spacing: 2px;
-	color: #f2f2f2;
+	color: var(--body-color);
 }
 
 .email_box::placeholder {
@@ -148,7 +148,7 @@
 
 .footer-container .last_box .social_icon {
 	font-size: 20px;
-	color: white;
+	color: var(--body-color);
 	cursor: pointer;
 	transition: transform 0.3s ease, color 0.3s ease;
 }

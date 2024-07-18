@@ -3,7 +3,7 @@ import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import "./styles.css";
 
-import logo from "../../Assets/logo.jpeg";
+import logo from "../../Assets/logo.png";
 import { Button, TextField } from "@mui/material";
 
 const Footer = () => {
