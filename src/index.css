@@ -28,7 +28,8 @@ html {
 	--font-semi-bold: 600;
 	--z-tooltip: 10;
 	--z-fixed: 100;
-	--button-color: #7a6800;
+	/* --button-color: #7a6800; this is the prevous color*/  
+	--button-color: #C8A500; /* this is the yellow color HSA suggested */
 
 	--nav-bg: #fff;
 }

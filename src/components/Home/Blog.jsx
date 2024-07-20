@@ -43,7 +43,7 @@ const ReadMoreButton = styled(Button)(({ theme }) => ({
 	//     rgba(205, 198, 74, 0.913),
 	//     rgba(21, 40, 145, 0.93)
 	// )`,
-	background: "#7a6800",
+	background: "#C8A500",
 	textTransform: "unset",
 	"&:hover": {
 		// backgroundImage: `linear-gradient(
@@ -51,7 +51,7 @@ const ReadMoreButton = styled(Button)(({ theme }) => ({
 		//     rgba(205, 198, 74, 0.913),
 		//     rgba(21, 40, 145, 0.93)
 		// )`,
-		background: '#7a6800',
+		background: '#C8A500',
 		opacity: '90%',
 		boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)",
 	},

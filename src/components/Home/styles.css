@@ -201,15 +201,16 @@
 	width: 100%;
 	height: 300px;
 	padding: 2rem;
-	background-image: url("../../Assets/about-big-bg_1.webp");
+	/* background-image: url("../../Assets/about-big-bg_1.webp"); */
 	/* background-position: center; */
 	background-size: cover;
 	background-repeat: no-repeat;
 	/* background-attachment: fixed; */
 	object-fit: contain;
+	background-color: var(--title-color);
 }
 
-.achievements-container::before {
+/* .achievements-container::before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -218,7 +219,7 @@
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.8);
 	z-index: 1;
-}
+} */
 
 .achievements-container .achievements-content {
 	width: 70%;
@@ -230,7 +231,7 @@
 }
 
 .achievements-content h5 {
-	color: white;
+	color: var(--body-color);
 	font-size: 1.2rem;
 	font-weight: 400;
 	text-transform: uppercase;
