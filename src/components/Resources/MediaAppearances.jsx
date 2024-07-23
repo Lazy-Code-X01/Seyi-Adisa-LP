@@ -173,6 +173,10 @@ const MediaAppearances = () => {
 	};
 
 	return (
+		<>
+			<h1 className="title media-appearance-title" style={{ color: "#232536" }}>
+				Media Appearances
+			</h1>
 		<Root data-aos="zoom-in" data-aos-duration="1000">
 			<Slider {...settings}>
 				{mediaAppearances.map((media, index) => (
@@ -226,6 +230,8 @@ const MediaAppearances = () => {
 				</Box>
 			)}
 		</Root>
+		</>
+
 	);
 };
 

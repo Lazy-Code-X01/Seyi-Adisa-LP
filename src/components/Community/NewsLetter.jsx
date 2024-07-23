@@ -8,7 +8,7 @@ const NewsLetter = () => {
 			data-aos="zoom-in"
 			data-aos-duration="1000"
 		>
-			<h3 className="title">Newsletter Signup</h3>
+			<h3 className="title">Stay Connected</h3>
 			<p className="newsletter-text">
 				Sign up for our newsletter to receive regular insights and updates.
 			</p>

@@ -25,7 +25,7 @@ const Footer = () => {
 			<div className="second_box">
 				<div className="subscribe_box">
 					<div className="subscribe_content">
-						Subscribe to our news letter to get <br /> latest updates and news
+						Stay Connected to get <br /> latest updates and news
 					</div>
 					<div className="registration_box">
 						<input
@@ -66,7 +66,7 @@ const Footer = () => {
 					</div>
 					<div className="icons">
 						<a
-							href="https://facebook.com"
+							href="https://web.facebook.com/officialseyiadisa/?_rdc=1&_rdr"
 							target="_blank"
 							rel="noopener noreferrer"
 						>

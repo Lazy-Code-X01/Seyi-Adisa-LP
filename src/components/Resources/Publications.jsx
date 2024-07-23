@@ -12,6 +12,7 @@ import {
 } from "@mui/material";
 import { styled } from "@mui/system";
 import axios from "axios";
+import "./styles.css";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -134,7 +135,7 @@ const Publications = () => {
 
 	return (
 		<Root>
-			<h1 className="title publication-title" style={{ color: "#232536" }}>
+			<h1 className="title publication-title" style={{ color: "#232536"}}>
 				Publications
 			</h1>
 			{loading ? (

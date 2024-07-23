@@ -12,7 +12,7 @@ const Welcome = () => {
 					data-aos="fade-right"
 					data-aos-duration="1000"
 				>
-					<h1 className="title">Hello Friend,</h1>
+					{/* <h1 className="title">Hello Friend,</h1> */}
 					<p className="description">
 						Engaging with the community is at the heart of my mission. I believe
 						in creating platforms that encourage the development of people and

@@ -48,5 +48,14 @@
 
 
 
+.media-appearance-title{
+	margin: 0px 0px 10px 2rem;
+}
 
+@media screen and (max-width: 450px) {
+	.media-appearance-title{
+		font-size: 25px !important;
+		margin-left: 1rem;
+	}
+}
 /* blog post styling */

@@ -11,7 +11,7 @@ const Hero = () => {
 				>
 					<p className="small">SERVICES</p>
 					<h1 className="title">
-						Seyi Adisa: Empowering Leadership and Growth Through Transformative
+						Empowering Leadership and Growth Through Transformative
 						Services
 					</h1>
 				</div>

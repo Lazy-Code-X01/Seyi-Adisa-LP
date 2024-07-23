@@ -12,7 +12,7 @@ const Hero = () => {
 				>
 					<p className="small">COMMUNITY</p>
 					<h1 className="title">
-						Seyi Adisa: Empowering Connections and Building Stronger Bonds
+						Empowering Connections and Building Stronger Bonds
 						Through our Community
 					</h1>
 				</div>

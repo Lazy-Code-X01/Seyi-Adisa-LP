@@ -8,7 +8,7 @@ const Hero = () => {
 				<div className="left__about">
 					<p className="small">ABOUT</p>
 					<h1 className="title">
-						Seyi Adisa: A Journey of Visionary Leadership and Transformative
+						A Journey of Visionary Leadership and Transformative
 						Impact
 					</h1>
 				</div>

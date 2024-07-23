@@ -14,7 +14,7 @@ const SociaMedia = () => {
 			data-aos-duration="1000"
 			>
 				<a
-					href="https://facebook.com"
+					href="https://web.facebook.com/officialseyiadisa/?_rdc=1&_rdr"
 					target="_blank"
 					rel="noopener noreferrer"
 				>

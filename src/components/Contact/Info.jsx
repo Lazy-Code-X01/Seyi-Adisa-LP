@@ -286,9 +286,9 @@ const Info = () => {
 							</Typography>
 							<Button
 								sx={{
-									backgroundColor: "#7a6800",
+									backgroundColor: "#C8A500",
 									fontWeight: "700",
-									"&:hover": { opacity: "90%", background: '#7a6800' },
+									"&:hover": { opacity: "90%", background: '#C8A500' },
 								}}
 								variant="contained"
 								color="primary"
