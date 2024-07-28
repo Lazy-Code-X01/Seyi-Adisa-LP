@@ -10,9 +10,9 @@ const Hero = () => {
 					data-aos="fade-up"
 					data-aos-duration="1000"
 				>
-					<p className="small">RESOURCES</p>
+					{/* <p className="small">RESOURCES</p> */}
 					<h1 className="title">
-						Driving Success Through Comprehensive Resource Solutions
+						Gain Valuable Knowledge on Governance, Leadership and National Development
 					</h1>
 				</div>
 			</div>

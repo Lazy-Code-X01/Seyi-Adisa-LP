@@ -105,14 +105,14 @@ const Info = () => {
 							<hr />
 							<div className="icon-container">
 								<a
-									href="https://facebook.com"
+									href="https://web.facebook.com/officialseyiadisa/?_rdc=1&_rdr"
 									target="_blank"
 									rel="noopener noreferrer"
 								>
 									<FaFacebook className="social-icon" />
 								</a>
 								<a
-									href="https://instagram.com"
+									href="https://www.instagram.com/seyiadisa_/"
 									target="_blank"
 									rel="noopener noreferrer"
 									className="social-icon"
@@ -120,7 +120,7 @@ const Info = () => {
 									<FaInstagram />
 								</a>
 								<a
-									href="https://twitter.com"
+									href="https://x.com/sjadisa?s=11"
 									target="_blank"
 									rel="noopener noreferrer"
 									className="social-icon"
@@ -128,7 +128,7 @@ const Info = () => {
 									<FaTwitter />
 								</a>
 								<a
-									href="https://linkedin.com"
+									href="https://www.linkedin.com/in/seyiadisa/"
 									target="_blank"
 									rel="noopener noreferrer"
 									className="social-icon"
@@ -281,9 +281,9 @@ const Info = () => {
 									</MenuItem>
 								))}
 							</TextField>
-							<Typography variant="body2" color="textSecondary">
+							{/* <Typography variant="body2" color="textSecondary">
 								[CAPTCHA or reCAPTCHA]
-							</Typography>
+							</Typography> */}
 							<Button
 								sx={{
 									backgroundColor: "#C8A500",

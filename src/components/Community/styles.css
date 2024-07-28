@@ -24,7 +24,7 @@
 
 .community .community-hero-content {
 	position: absolute;
-	top: 40%;
+	top: 50%;
 	width: 700px;
 	padding: 2rem;
 
@@ -271,4 +271,47 @@
 .newsletter-form .newsletter-btn:active {
 	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 	transform: scale(0.98);
+}
+
+
+.get-involved-section {
+  padding: 2rem;
+  background-color: var(--body-color);
+  text-align: center;
+  /* max-width: 1280px; */
+  /* margin: 2rem; */
+  /* border-radius: 20px; */
+  /* transform: rotate(2deg); */
+}
+
+.get-involved-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.get-involved-section .title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.get-involved-section .description {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.volunteer-button {
+  background-color: var(--button-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: opacity 0.3s ease;
+}
+
+.volunteer-button:hover {
+  opacity: 90%;
 }

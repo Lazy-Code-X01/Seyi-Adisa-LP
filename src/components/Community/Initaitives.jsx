@@ -2,10 +2,22 @@ import React from "react";
 import "./styles.css";
 import img from "../../Assets/RID_6114.jpg";
 
-import agidLogo from "../../Assets/try.png";
+import agidLogo from "../../Assets/agid.png";
 import elevenLogo from "../../Assets/7 eleven.png";
 import sadiLogo from "../../Assets/sadi logo.png";
+import { Link, useNavigate } from "react-router-dom";
 const Initaitives = () => {
+	const navigate = useNavigate()
+
+	 const visitSevenEleven = () => {
+    window.open('https://web.facebook.com/711foundation/?_rdc=1&_rdr', '_blank');
+  };
+	const visitAgid = () =>{
+		window.open('https://africangovernance.org/', '_blank')
+	}
+	const visitSadi = () =>{
+		window.open('https://sadinigeria.org/', '_blank')
+	}
 	return (
 		<>
 			<div className="initiatives_container">
@@ -23,7 +35,7 @@ const Initaitives = () => {
 						healthcare, infrastructure, and empowerment through sports, ICT, and
 						technical and vocational skill acquisition programs.
 					</p>
-					<button className="visit-button">Visit SADI</button>
+					<button className="visit-button" onClick={visitSadi}>Visit SADI</button>
 				</div>
 			</div>
 
@@ -42,7 +54,7 @@ const Initaitives = () => {
 						groups, and online platforms to foster a knowledge economy of good
 						governance.
 					</p>
-					<button className="visit-button">Visit AGID</button>
+					<button className="visit-button" onClick={visitAgid}>Visit AGID</button>
 				</div>
 				<div className="initiatives_container_img">
 					<img src={agidLogo} alt="image loading .." />
@@ -63,7 +75,7 @@ const Initaitives = () => {
 						equipping them with knowledge, skills, and grants during the early
 						phases of their ventures.
 					</p>
-					<button className="visit-button">Visit 7Eleven</button>
+					<button className="visit-button" onClick={visitSevenEleven}>Visit 7Eleven</button>
 				</div>
 			</div>
 		</>

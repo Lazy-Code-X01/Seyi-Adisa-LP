@@ -85,8 +85,8 @@ const Testimonial = () => {
 							src={testimonial.image}
 							alt={testimonial.author}
 							sx={{
-								width: 120,
-								height: 120,
+								width: 200,
+								height: 200,
 							}}
 							className="testimonial-image"
 						/>

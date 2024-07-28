@@ -1,8 +1,13 @@
 import React from "react";
 import { FaUtensils, FaChalkboardTeacher, FaGlobe } from "react-icons/fa";
 import "./styles.css";
+import { useNavigate } from "react-router-dom";
 
 const UpcomingEvents = () => {
+	const navigate = useNavigate()
+	const toContact = () => {
+		navigate('/contact')
+	}
 	return (
 		<section
 			className="upcoming-events"
@@ -20,18 +25,18 @@ const UpcomingEvents = () => {
 				<div className="event-card">
 					<FaUtensils className="event-icon" />
 					<h3>Lunch & Learn</h3>
-					<p>July 6</p>
+					<p>October 2</p>
 					<div className="overlay">
-						<button className="book-button">Book</button>
+						<button className="book-button" onClick={toContact}>Book</button>
 					</div>
 				</div>
 				<div className="event-card">
 					<FaChalkboardTeacher className="event-icon" />
 
 					<h3>Governance Workshop</h3>
-					<p>July 13</p>
+					<p>November 13</p>
 					<div className="overlay">
-						<button className="book-button">Book</button>
+						<button className="book-button" onClick={toContact}>Book</button>
 					</div>
 				</div>
 				<div className="event-card">
@@ -40,7 +45,7 @@ const UpcomingEvents = () => {
 					<h3>Change Your World</h3>
 					<p>October 19</p>
 					<div className="overlay">
-						<button className="book-button">Book</button>
+						<button className="book-button" onClick={toContact}>Book</button>
 					</div>
 				</div>
 			</div>

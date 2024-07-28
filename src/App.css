@@ -24,3 +24,10 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #000000f9;
 }
+
+
+.des{
+  margin: 1rem 0;
+  line-height: 24px;
+  color: var(--body-color);
+}

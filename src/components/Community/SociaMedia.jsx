@@ -21,7 +21,7 @@ const SociaMedia = () => {
 					<FaFacebook className="social_icon" />
 				</a>
 				<a
-					href="https://instagram.com"
+					href="https://www.instagram.com/seyiadisa_/"
 					target="_blank"
 					rel="noopener noreferrer"
 					className="social_icon"
@@ -29,7 +29,7 @@ const SociaMedia = () => {
 					<FaInstagram />
 				</a>
 				<a
-					href="https://twitter.com"
+					href="https://x.com/sjadisa?s=11"
 					target="_blank"
 					rel="noopener noreferrer"
 					className="social_icon"
@@ -37,7 +37,7 @@ const SociaMedia = () => {
 					<FaTwitter />
 				</a>
 				<a
-					href="https://linkedin.com"
+					href="https://www.linkedin.com/in/seyiadisa/"
 					target="_blank"
 					rel="noopener noreferrer"
 					className="social_icon"

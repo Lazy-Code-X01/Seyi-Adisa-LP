@@ -10,7 +10,7 @@ const Hero = () => {
 					data-aos="fade-up"
 					data-aos-duration="1000"
 				>
-					<p className="small">COMMUNITY</p>
+					{/* <p className="small">COMMUNITY</p> */}
 					<h1 className="title">
 						Empowering Connections and Building Stronger Bonds
 						Through our Community

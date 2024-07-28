@@ -24,7 +24,7 @@ const Mission = () => {
 				</p>
 			</div>
 			<div className="vission_container">
-				<p className="small">Vission</p>
+				<p className="small">Vision</p>
 				<div className="title">
 					Pioneering New Horizons in Governance and Leadership
 				</div>
@@ -33,13 +33,13 @@ const Mission = () => {
 					data-aos="fade-left"
 					data-aos-duration="1000"
 				>
-					Furthermore, Seyi advocates for active citizen participation in
+					Seyi advocates for active citizen participation in
 					governance. He believes that meaningful progress can only be achieved
 					when the people engage in the governance process, contributing their
 					voices and efforts rather than relying solely on leadership. His
 					vision is to foster a collaborative environment where leaders and
 					citizens work together to address societal issues, driving sustainable
-					development and inclusive growth across all around Africa.
+					development and inclusive growth across all  Africa.
 				</p>
 			</div>
 		</div>

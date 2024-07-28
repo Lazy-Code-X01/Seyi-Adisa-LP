@@ -107,19 +107,19 @@ const MediaAppearances = () => {
 	const mediaAppearances = [
 		{
 			title: "Sustainable Governance on TVC",
-			videoLink: "https://youtu.be/C4vwz26c9cs",
+			videoLink: "https://youtu.be/l1_p5HaGOQY",
 		},
 		{
 			title: "Leadership in Crisis Podcast",
-			videoLink: "https://youtu.be/vNCM5b3kLnA",
+			videoLink: "https://youtu.be/0OqvHagwa6Q",
 		},
 		{
 			title: "Future of Governance Interview",
-			videoLink: "https://youtu.be/D95hTI97pOc",
+			videoLink: "https://youtu.be/34AISwbvD2Q",
 		},
 		{
 			title: "Ethical Leadership Webinar",
-			videoLink: "https://youtu.be/D95hTI97pOc",
+			videoLink: "https://youtu.be/QoyfLpbXs6s",
 		},
 	];
 
@@ -177,6 +177,9 @@ const MediaAppearances = () => {
 			<h1 className="title media-appearance-title" style={{ color: "#232536" }}>
 				Media Appearances
 			</h1>
+			<p className="des media-appearance-des" style={{marginLeft: '2rem'}}>
+				Explore a curated selection of links and summaries of interviews, podcasts, and video clips featuring thought leader Seyi Adisa. Gain insights from his discussions on various platforms about sustainable governance, leadership development, and community empowerment.
+			</p>
 		<Root data-aos="zoom-in" data-aos-duration="1000">
 			<Slider {...settings}>
 				{mediaAppearances.map((media, index) => (

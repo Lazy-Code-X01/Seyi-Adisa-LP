@@ -14,7 +14,7 @@ const Services = () => {
 	return (
 		<div>
 			<Hero />
-			<Consulting />
+			{/* <Consulting /> */}
 			<SpeakingEngagement />
 			<WorkshopTraining />
 			<UpcomingEvents />

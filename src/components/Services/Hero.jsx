@@ -9,7 +9,7 @@ const Hero = () => {
 					data-aos="fade-up"
 					data-aos-duration="1000"
 				>
-					<p className="small">SERVICES</p>
+					{/* <p className="small">SERVICES</p> */}
 					<h1 className="title">
 						Empowering Leadership and Growth Through Transformative
 						Services

@@ -138,6 +138,9 @@ const Publications = () => {
 			<h1 className="title publication-title" style={{ color: "#232536"}}>
 				Publications
 			</h1>
+			<p className="des">
+				Access a range of e-books and reports that delve into critical topics related to governance and leadership. Our publications offer actionable insights and practical guidance to help you implement effective strategies in your personal and professional life.
+			</p>
 			{loading ? (
 				<Box display="flex" justifyContent="center" mt={4}>
 					<CircularProgress color="inherit" size={"25px"} />

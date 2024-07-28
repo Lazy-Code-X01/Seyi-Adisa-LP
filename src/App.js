@@ -14,6 +14,8 @@ import useScrollToTop from "./utils/useScrollToTop";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./App.css";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 // import './utils/mediaQuery.css'
 const Home = lazy(() => import("./pages/Home"));
@@ -77,6 +79,7 @@ const App = ({ }) => {
 		<Router>
 			<Navbar />
 			<AppContent />
+			<ToastContainer />
 		</Router>
 	);
 };

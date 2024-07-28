@@ -27,18 +27,18 @@ const SpeakingEngagement = () => {
 					<ul className="services-list">
 						<li>
 							<FaRegCircleCheck className="icon" />
-							<p> Speaking Topics</p>
+							<p> Governance</p>
 
 							{/* Seyi addresses a wide range of topics including leadership development, good governance practices, youth empowerment, and strategic planning. His talks are designed to inspire and provide practical insights that attendees can apply in their personal and professional lives. */}
 						</li>
 						<li>
 							<FaRegCircleCheck className="icon" />
-							<p> Past Speaking Engagements</p>
+							<p> Leadership</p>
 							{/* Seyi has spoken at numerous prestigious events, including international conferences, corporate seminars, and educational institutions. His engaging style and thought-provoking content have made him a sought-after speaker across various platforms. */}
 						</li>
 						<li>
 							<FaRegCircleCheck className="icon" />
-							<p> Booking Information </p>
+							<p> Nation building </p>
 							{/* Organizations and event planners can book Seyi for conferences, workshops, and seminars. His expertise and engaging delivery make him an ideal choice for keynote addresses, panel discussions, and motivational sessions. For booking inquiries, please visit our contact page or reach out via email. */}
 						</li>
 					</ul>

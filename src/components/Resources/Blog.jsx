@@ -126,8 +126,11 @@ const Blog = () => {
 	return (
 		<Root>
 			<h1 className="title all-post-title" style={{ color: "#232536" }}>
-				All Posts
+				Blog Posts
 			</h1>
+			<p className="des">
+				Stay updated with regular blog posts on current trends and best practices in governance and leadership. Our blog provides thought-provoking articles, practical tips, and in-depth analyses to help you stay ahead in your leadership journey.
+			</p>
 			{loading ? (
 				<Box display="flex" justifyContent="center" mt={4}>
 					<CircularProgress color="inherit" size={"25px"} />

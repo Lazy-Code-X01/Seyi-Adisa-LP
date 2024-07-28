@@ -10,12 +10,14 @@ import Footer from "../components/Footer/Footer";
 
 // media query
 import '../utils/mediaQuery.css'
+import GetInvolvedSection from "../components/Community/GetInvolvedSection";
 const Community = () => {
 	return (
 		<div>
 			<Hero />
 			<Welcome />
 			<Initaitives />
+			<GetInvolvedSection />
 			<NewsLetter />
 			<SociaMedia />
 			<UpcomingEvents />
