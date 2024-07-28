@@ -31,3 +31,10 @@
   line-height: 24px;
   color: var(--body-color);
 }
+
+@media screen and (max-width: 450px) {
+  .des{
+				font-size: 0.875rem !important;
+		line-height: 20px !important;
+	}
+}

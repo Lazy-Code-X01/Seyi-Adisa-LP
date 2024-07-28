@@ -5,8 +5,8 @@ import "./styles.css";
 
 import logo from "../../Assets/logo.png";
 import { Button, TextField } from "@mui/material";
-import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
+
 import axios from "axios";
 
 const Footer = () => {
@@ -104,7 +104,6 @@ const Footer = () => {
 					</div>
 				</div>
 			</div>
-			<ToastContainer />
 		</div>
 	);
 };

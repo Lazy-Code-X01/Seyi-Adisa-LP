@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 import "./styles.css";
 
 const NewsLetter = () => {
@@ -41,7 +40,6 @@ const NewsLetter = () => {
           {loading ? "Submitting..." : "Submit"}
         </button>
       </form>
-      <ToastContainer />
     </div>
   );
 };

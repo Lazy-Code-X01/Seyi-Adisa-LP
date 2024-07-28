@@ -5,22 +5,16 @@ import {
 	Box,
 	TextField,
 	MenuItem,
-	FormControl,
-	FormLabel,
-	RadioGroup,
-	FormControlLabel,
-	Radio,
-	Checkbox,
 	Button,
-	Typography,
 	CircularProgress,
 } from "@mui/material";
 
 import axios from "axios";
 
 import Footer from "../Footer/Footer";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+
+import {toast } from "react-toastify";
+
 
 const inquiryOptions = [
 	{ value: "general", label: "General Inquiry" },
@@ -298,7 +292,6 @@ const Info = () => {
 								{loading ? <CircularProgress size={"24px"} /> : "Submit"}
 							</Button>
 
-							<ToastContainer />
 						</Box>
 					</div>
 				</div>
