@@ -38,3 +38,15 @@
 		line-height: 20px !important;
 	}
 }
+
+.media-appearance-title{
+	margin: 0px 0px 10px 2rem;
+	margin-right: 2rem;
+	color: #232536;
+}
+
+.media-appearance-des{
+  margin: 1rem 0;
+  line-height: 24px;
+  color: var(--body-color);
+}

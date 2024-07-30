@@ -23,7 +23,7 @@ const WorkshopTraining = () => {
 					<ul className="services-list">
 						<li>
 							<FaRegCircleCheck className="icon" />
-							<p> Workshops</p>
+							<p> Lunch & Learn</p>
 
 							{/*  We offer a variety of workshops covering topics such as leadership development, strategic planning, governance best practices, and youth empowerment. Each workshop is designed to provide hands-on learning experiences that foster practical skills and knowledge. */}
 						</li>
@@ -34,12 +34,12 @@ const WorkshopTraining = () => {
 						{/* </li> */}
 						<li>
 							<FaRegCircleCheck className="icon" />
-							<p> Training Programs </p>
+							<p> Individual and Group Coaching </p>
 							{/* We conduct comprehensive training programs for organizations and individuals, focusing on areas such as leadership, governance, and personal development. Our training programs are designed to build competencies and drive measurable results. */}
 						</li>
 						<li>
 							<FaRegCircleCheck className="icon" />
-							<p> Schedules and Registration </p>
+							<p> Governance Workshop </p>
 							{/* Detailed information on upcoming workshops, webinars, and training programs is available on our website. Participants can view schedules, learn about program content, and register online. For any inquiries, please contact us directly. */}
 						</li>
 					</ul>

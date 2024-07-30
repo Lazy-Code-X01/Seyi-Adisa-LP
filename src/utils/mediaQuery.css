@@ -654,3 +654,19 @@
 		text-align: start !important;
 	}
 }
+
+
+/* media appearances media quert */
+
+@media screen and (max-width: 450px) {
+	.media-appearance-title{
+		font-size: 25px !important;
+		margin-left: 1rem;
+	}
+	
+	.media-appearance-des{
+		margin-left: 1rem !important;
+		font-size: 0.875rem !important;
+		line-height: 20px !important;
+	}
+}

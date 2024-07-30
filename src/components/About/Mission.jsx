@@ -24,7 +24,7 @@ const Mission = () => {
 				</p>
 			</div>
 			<div className="vission_container">
-				<p className="small">Vision</p>
+				<p className="small" style={{visibility: "hidden"}}>Vision</p>
 				<div className="title">
 					Pioneering New Horizons in Governance and Leadership
 				</div>

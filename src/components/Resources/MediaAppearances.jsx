@@ -7,6 +7,7 @@ import { FaPlay } from "react-icons/fa";
 import { FaTimes } from "react-icons/fa";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "./styles.css";
 
 const Root = styled(Box)(({ theme }) => ({
 	padding: "2rem",
@@ -174,7 +175,7 @@ const MediaAppearances = () => {
 
 	return (
 		<>
-			<h1 className="title media-appearance-title" style={{ color: "#232536" }}>
+			<h1 className="media-appearance-title">
 				Media Appearances
 			</h1>
 			<p className="des media-appearance-des" style={{marginLeft: '2rem'}}>
