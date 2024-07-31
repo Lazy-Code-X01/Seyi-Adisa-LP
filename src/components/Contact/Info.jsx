@@ -18,7 +18,7 @@ import {toast } from "react-toastify";
 
 const inquiryOptions = [
 	{ value: "general", label: "General Inquiry" },
-	{ value: "consulting", label: "Consulting Services" },
+	{ value: "volunteer", label: "Volunteer" },
 	{ value: "speaking", label: "Speaking Engagements" },
 	{ value: "workshops", label: "Workshops and Training" },
 	{ value: "media", label: "Media Requests" },
