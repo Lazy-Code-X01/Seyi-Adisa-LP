@@ -438,7 +438,8 @@
 
 	.about-content .title {
 		font-size: 25px !important;
-	}
+		line-height: 1.6 !important;
+	}z
 
 	.vission_mission_container .small {
 		font-size: 0.9rem !important;
@@ -492,6 +493,7 @@
 	}
 	.services-hero-content .title {
 		font-size: 25px !important;
+		line-height: 1.6 !important;
 	}
 
 	.consulting-container {
@@ -550,6 +552,7 @@
 
 	.resources-hero-content .title {
 		font-size: 25px !important;
+		line-height: 1.6 !important;
 	}
 
 	/* all post */
@@ -587,6 +590,7 @@
 
 	.community-hero-content .title {
 		font-size: 25px !important;
+		line-height: 1.6 !important;
 	}
 
 	.welcome-container {

@@ -8,6 +8,10 @@ const UpcomingEvents = () => {
 	const toContact = () => {
 		navigate('/contact')
 	}
+	const toLaunchAndLearn = () => {
+		window.open('https://docs.google.com/forms/d/1h6ZTn0u3R_46CSKUweaExRKTBbaOYEG0da-DGyDdYI4/edit', '_blank');
+	}
+
 	return (
 		<section
 			className="upcoming-events"
@@ -25,16 +29,16 @@ const UpcomingEvents = () => {
 				<div className="event-card">
 					<FaUtensils className="event-icon" />
 					<h3>Lunch & Learn</h3>
-					<p>October 2</p>
+					<p>November 9</p>
 					<div className="overlay">
-						<button className="book-button" onClick={toContact}>Book</button>
+						<button className="book-button" onClick={toLaunchAndLearn}>Book</button>
 					</div>
 				</div>
 				<div className="event-card">
 					<FaChalkboardTeacher className="event-icon" />
 
 					<h3>Governance Workshop</h3>
-					<p>November 13</p>
+					<p>February</p>
 					<div className="overlay">
 						<button className="book-button" onClick={toContact}>Book</button>
 					</div>
@@ -43,7 +47,7 @@ const UpcomingEvents = () => {
 					<FaGlobe className="event-icon" />
 
 					<h3>Change Your World</h3>
-					<p>October 19</p>
+					<p>March</p>
 					<div className="overlay">
 						<button className="book-button" onClick={toContact}>Book</button>
 					</div>
