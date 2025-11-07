@@ -3,10 +3,10 @@ import React, { lazy, Suspense, useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import {
-	BrowserRouter as Router,
-	Routes,
-	Route,
-	useLocation,
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
 } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Loader from "./components/Loader/Loader";
@@ -16,6 +16,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "./App.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Books from "./pages/Books";
 
 // import './utils/mediaQuery.css'
 const Home = lazy(() => import("./pages/Home"));
@@ -26,62 +27,62 @@ const Resources = lazy(() => import("./pages/Resources"));
 const Community = lazy(() => import("./pages/Community"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
 
-
 const AppContent = () => {
-	const [loading, setLoading] = useState(false);
-	const location = useLocation();
+  const [loading, setLoading] = useState(false);
+  const location = useLocation();
 
-	useScrollToTop();
+  useScrollToTop();
 
-	useEffect(() => {
-		const handleStart = () => {
-			setLoading(true);
-		};
+  useEffect(() => {
+    const handleStart = () => {
+      setLoading(true);
+    };
 
-		const handleComplete = () => {
-			setLoading(false);
-		};
+    const handleComplete = () => {
+      setLoading(false);
+    };
 
-		handleStart();
-		handleComplete();
+    handleStart();
+    handleComplete();
 
-		return () => {
-			handleComplete();
-		};
-	}, [location]);
+    return () => {
+      handleComplete();
+    };
+  }, [location]);
 
-	useEffect(() => {
-		AOS.init({});
-	}, []);
+  useEffect(() => {
+    AOS.init({});
+  }, []);
 
-	return (
-		<>
-			{loading && <Loader />}
-			<main className="main-content">
-				<Suspense fallback={<Loader />}>
-					<Routes>
-						<Route path="/" element={<Home />}      />
-						<Route path="/about" element={<About />} />
-						<Route path="/contact" element={<Contact />} />
-						<Route path="/services" element={<Services />} />
-						<Route path="/resources" element={<Resources />} />
-						<Route path="/resources/:id" element={<BlogPost />} />
-						<Route path="/community" element={<Community />} />
-					</Routes>
-				</Suspense>
-			</main>
-		</>
-	);
+  return (
+    <>
+      {loading && <Loader />}
+      <main className="main-content">
+        <Suspense fallback={<Loader />}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/resources" element={<Resources />} />
+            <Route path="/resources/:id" element={<BlogPost />} />
+            <Route path="/community" element={<Community />} />
+            <Route path="/books" element={<Books />} />
+          </Routes>
+        </Suspense>
+      </main>
+    </>
+  );
 };
 
-const App = ({ }) => {
-	return (
-		<Router>
-			<Navbar />
-			<AppContent />
-			<ToastContainer />
-		</Router>
-	);
+const App = ({}) => {
+  return (
+    <Router>
+      <Navbar />
+      <AppContent />
+      <ToastContainer />
+    </Router>
+  );
 };
 
 export default App;
