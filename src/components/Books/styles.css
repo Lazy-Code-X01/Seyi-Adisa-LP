@@ -1,0 +1,129 @@
+.books-container {
+  padding: 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding-top: 5rem;
+}
+
+.book-image {
+  flex: 0.8;
+  max-width: 450px;
+}
+
+.book-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.book-image img:hover {
+  transform: scale(1.02);
+}
+
+.book-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.book-title {
+  color: var(--title-color);
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.book-subtitle {
+  color: var(--first-color);
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.book-description {
+  color: #4a4a4a;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+.pre-order-button {
+  background: var(--button-color);
+  color: var(--title-color);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 100px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.pre-order-button:hover {
+  opacity: 0.9;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.pre-order-button:active {
+  transform: translateY(0);
+}
+
+.book-features {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.feature-title {
+  color: var(--first-color);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.feature-text {
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .books-container {
+    flex-direction: column;
+    padding: 1rem;
+    padding-top: 5rem;
+  }
+
+  .book-image {
+    max-width: 100%;
+  }
+
+  .book-title {
+    font-size: 2.5rem;
+  }
+
+  .book-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .book-features {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
