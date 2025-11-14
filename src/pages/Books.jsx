@@ -3,7 +3,7 @@ import BookCover from "../Assets/book-cover.jpg";
 
 const Books = () => {
   const handlePreOrder = () => {
-    window.open("https://bit.ly/preorder-leading-at-27-by-SA", "_blank");
+    window.open("https://paystack.com/buy/leading-at-27-preorder", "_blank");
   };
 
   return (
@@ -14,14 +14,56 @@ const Books = () => {
       <div className="book-content">
         <h1 className="book-title">Leading at 27</h1>
         <h2 className="book-subtitle">
-          How Young Leaders Can Change the World
+          How a Young Leader Can Change the World
         </h2>
-        <p className="book-description">
-          Discover powerful lessons in character, influence, and purpose from a
-          young leader who's making waves in the business world. This compelling
-          book offers practical insights and strategies for emerging leaders who
-          want to make a significant impact, regardless of their age.
-        </p>
+
+        <div className="book-description">
+          <p className="by-line">
+            <strong>By Seyi Adisa</strong>
+          </p>
+
+          <p>
+            At twenty-seven, most people are still finding their feet. Seyi
+            Adisa was already leading. From co-founding a thriving law firm to
+            serving as Principal Private Secretary to a former Governor of Oyo
+            State, Seyi stepped into leadership early, and learned firsthand
+            that leadership is not a title; it’s a test. Leading at 27
+            chronicles that defining journey, revealing how courage, clarity,
+            and conviction can shape extraordinary influence even at a young
+            age.
+          </p>
+
+          <p>
+            In this compelling and deeply practical book, Seyi shares the
+            pivotal lessons that shaped his evolution, from boardrooms to the
+            corridors of government, and the principles that helped him lead
+            with integrity, navigate politics with wisdom, and inspire others
+            toward purpose-driven impact.
+          </p>
+
+          <ul>
+            <li>Find clarity of purpose even in uncertain systems.</li>
+            <li>
+              Lead with values in spaces often shaped by politics and pressure.
+            </li>
+            <li>
+              Transform ideas into impact through discipline, strategy, and
+              emotional intelligence.
+            </li>
+            <li>
+              Build credibility early and influence meaningfully, without
+              waiting for age or titles.
+            </li>
+          </ul>
+
+          <p>
+            Whether you’re a young professional, entrepreneur, or emerging
+            public servant, Leading at 27 is a wake-up call to stop waiting for
+            the perfect moment to lead, and start shaping the future from
+            wherever you stand.
+          </p>
+        </div>
+
         <div className="book-features">
           <div className="feature">
             <span className="feature-title">Character</span>
@@ -42,6 +84,7 @@ const Books = () => {
             </span>
           </div>
         </div>
+
         <button className="pre-order-button" onClick={handlePreOrder}>
           Pre-order Now
         </button>

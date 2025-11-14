@@ -57,6 +57,10 @@
   letter-spacing: 0.3px;
 }
 
+.by-line {
+  margin-bottom: 1rem;
+}
+
 .pre-order-button {
   background: var(--button-color);
   color: var(--title-color);
