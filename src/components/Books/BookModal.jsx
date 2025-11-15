@@ -51,17 +51,25 @@ const BookModal = () => {
             <p className="modal-by">By Seyi Adisa</p>
 
             <p className="modal-blurb">
-              At twenty-seven, most people are still finding their feet. Seyi
-              Adisa was already leading. Leading at 27 chronicles that
-              defining journey and reveals how courage, clarity, and conviction
-              can shape extraordinary influence even at a young age.
+              At twenty-seven Seyi Adisa was already leading. This short,
+              practical book shares the core lessons—courage, clarity, and
+              conviction—that helped him lead with integrity and create
+              meaningful impact. A compact guide for young leaders ready to act.
             </p>
 
             <div className="modal-ctas">
-              <button className="pre-order-button" onClick={handlePreOrder}>
+              <button
+                className="pre-order-button modal-preorder"
+                onClick={handlePreOrder}
+                aria-label="Pre-order Leading at 27"
+              >
                 Pre-order Now
               </button>
-              <button className="modal-secondary" onClick={handleClose}>
+              <button
+                className="modal-secondary modal-later"
+                onClick={handleClose}
+                aria-label="Close book modal"
+              >
                 Maybe later
               </button>
             </div>
