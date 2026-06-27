@@ -3,7 +3,7 @@ import BookCover from "../Assets/book-cover.jpg";
 
 const Books = () => {
   const handlePreOrder = () => {
-    window.open("https://paystack.com/buy/leading-at-27-preorder", "_blank");
+    window.open("https://paystack.com/buy/leading-at-27", "_blank");
   };
 
   return (

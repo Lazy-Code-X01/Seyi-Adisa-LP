@@ -25,7 +25,7 @@ const BookModal = () => {
 
   const handleClose = () => setVisible(false);
   const handlePreOrder = () => {
-    window.open("https://paystack.com/buy/leading-at-27-preorder", "_blank");
+    window.open("https://paystack.com/buy/leading-at-27", "_blank");
   };
 
   return (
