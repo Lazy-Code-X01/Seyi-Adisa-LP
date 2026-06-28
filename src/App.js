@@ -17,6 +17,7 @@ import "./App.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Books from "./pages/Books";
+import BookModal from "./components/Books/BookModal";
 
 // import './utils/mediaQuery.css'
 const Home = lazy(() => import("./pages/Home"));
@@ -78,6 +79,7 @@ const AppContent = () => {
 const App = ({}) => {
   return (
     <Router>
+      <BookModal />
       <Navbar />
       <AppContent />
       <ToastContainer />

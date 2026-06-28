@@ -61,9 +61,9 @@ const BookModal = () => {
               <button
                 className="pre-order-button modal-preorder"
                 onClick={handlePreOrder}
-                aria-label="Pre-order Leading at 27"
+                aria-label="Get the book Leading at 27"
               >
-                Pre-order Now
+                Get the book
               </button>
               <button
                 className="modal-secondary modal-later"

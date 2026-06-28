@@ -86,7 +86,7 @@ const Books = () => {
         </div>
 
         <button className="pre-order-button" onClick={handlePreOrder}>
-          Pre-order Now
+          Get the book
         </button>
       </div>
     </div>
