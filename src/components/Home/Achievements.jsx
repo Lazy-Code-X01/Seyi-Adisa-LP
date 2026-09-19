@@ -14,7 +14,7 @@ const Achievements = () => (
   <section className="home-featured" aria-labelledby="featured-heading">
     <div className="home-featured__inner">
       <h2 id="featured-heading">As featured in</h2>
-      <ul className="home-featured__logos" aria-label="Featured organisations and recognition">
+      <ul className="home-featured__logos" tabIndex={0} aria-label="Featured organisations and recognition; scroll horizontally to see all logos">
         {marks.map(({ label, start, width }) => (
           <li className="home-featured__item" key={label}>
             <div className="home-featured__mark" style={{ aspectRatio: `${width} / 113`, width: `${width * 0.69}px` }}>
@@ -27,6 +27,7 @@ const Achievements = () => (
           </li>
         ))}
       </ul>
+      <p className="home-featured__hint">Swipe to explore</p>
     </div>
   </section>
 );
