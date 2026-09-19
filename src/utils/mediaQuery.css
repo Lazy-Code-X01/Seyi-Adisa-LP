@@ -674,3 +674,31 @@
 		line-height: 20px !important;
 	}
 }
+/* Light mobile polish for the existing layouts. */
+@media screen and (max-width: 768px) {
+  .hero .hero-text p {
+    font-size: 1rem !important;
+    line-height: 1.65;
+  }
+
+  .achievements-content .achievement-img-container img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .home-about .content p {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .contact-us-container h1,
+  .contact-us-container .desc {
+    display: block;
+  }
+
+  .contact-us-container h1 {
+    font-size: 2rem;
+    line-height: 1.25;
+  }
+}

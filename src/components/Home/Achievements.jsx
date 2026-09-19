@@ -1,28 +1,34 @@
 import React from "react";
-import "./styles.css";
-import img1 from "../../Assets/Logo_1.png";
-import img2 from "../../Assets/Logo 2.png";
-import img3 from "../../Assets/Logo 3.png";
-import img4 from "../../Assets/Logo 4.png";
-import img5 from "../../Assets/Logo 5.png";
+import logos from "../../Assets/featured.png";
+import "./featured.css";
 
-import img from "../../Assets/featured.png";
+// Display each mark from the original logo strip without stretching it.
+const marks = [
+  { label: "Featured organisation emblem", start: 0, width: 112 },
+  { label: "ICSAN", start: 200, width: 170 },
+  { label: "Oyo State Youth Awards", start: 420, width: 193 },
+  { label: "MIPAD — Most Influential People of African Descent", start: 655, width: 184 },
+];
 
-const Achievements = () => {
-	return (
-		<div className="achievements-container">
-			<div className="achievements-content">
-				<h5>As Featured in</h5>
-				<div
-					className="achievement-img-container"
-					data-aos="fade-up-right"
-					data-aos-duration="1000"
-				>
-					<img className="achievement-img" src={img} alt="" />
-				</div>
-			</div>
-		</div>
-	);
-};
+const Achievements = () => (
+  <section className="home-featured" aria-labelledby="featured-heading">
+    <div className="home-featured__inner">
+      <h2 id="featured-heading">As featured in</h2>
+      <ul className="home-featured__logos" aria-label="Featured organisations and recognition">
+        {marks.map(({ label, start, width }) => (
+          <li className="home-featured__item" key={label}>
+            <div className="home-featured__mark" style={{ aspectRatio: `${width} / 113`, width: `${width * 0.69}px` }}>
+              <img
+                src={logos}
+                alt={label}
+                style={{ width: `${840 / width * 100}%`, left: `${-start / width * 100}%` }}
+              />
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+);
 
 export default Achievements;

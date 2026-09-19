@@ -1,17 +1,17 @@
 import React from "react";
+import "./page.css";
 
 const Mission = () => {
 	return (
-		<div className="vission_mission_container">
-			<div className="mission_container">
-				<p className="small">Philosophy</p>
-				<p className="title">
+		<section className="about-principles" aria-label="Philosophy and vision">
+        <div className="about-page-inner about-principles__grid">
+			<div className="about-principles__card">
+				<p className="about-principles__label">Philosophy</p>
+				<h2>
 					Guiding Governance and Leadership Towards Sustainable Transformation
-				</p>
+				</h2>
 				<p
-					className="description"
-					data-aos="fade-right"
-					data-aos-duration="1000"
+					className="about-principles__description"
 				>
 					Seyi holds a profound belief that governance is both a privilege and a
 					sacred duty. He views his role in government as an opportunity to
@@ -23,15 +23,13 @@ const Mission = () => {
 					the community.
 				</p>
 			</div>
-			<div className="vission_container">
-				<p className="small" style={{visibility: "hidden"}}>Vision</p>
-				<div className="title">
+			<div className="about-principles__card">
+				<p className="about-principles__label">Vision</p>
+				<h2>
 					Pioneering New Horizons in Governance and Leadership
-				</div>
+				</h2>
 				<p
-					className="description"
-					data-aos="fade-left"
-					data-aos-duration="1000"
+					className="about-principles__description"
 				>
 					Seyi advocates for active citizen participation in
 					governance. He believes that meaningful progress can only be achieved
@@ -42,7 +40,8 @@ const Mission = () => {
 					development and inclusive growth across all  Africa.
 				</p>
 			</div>
-		</div>
+        </div>
+		</section>
 	);
 };
 

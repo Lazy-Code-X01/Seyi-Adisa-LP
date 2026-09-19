@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { IoClose, IoMenu } from "react-icons/io5";
 import "./Navbar.css";
@@ -6,6 +6,20 @@ import logo from "../../Assets/logo.png";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
+
+  const menuToggle = useRef(null);
+
+  useEffect(() => {
+    if (!showMenu) return;
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        setShowMenu(false);
+        menuToggle.current?.focus();
+      }
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [showMenu]);
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
@@ -22,7 +36,7 @@ const Navbar = () => {
       <nav className="nav container">
         <NavLink to="/" className="nav__logo">
           {/* Hon. Seyi Adisa */}
-          <img src={logo} alt="logo" />
+          <img src={logo} alt="Seyi Adisa" />
         </NavLink>
 
         <div
@@ -90,14 +104,14 @@ const Navbar = () => {
               </NavLink>
             </li>
           </ul>
-          <div className="nav__close" id="nav-close" onClick={toggleMenu}>
+          <button type="button" aria-label="Close navigation" className="nav__close" id="nav-close" onClick={() => { setShowMenu(false); menuToggle.current?.focus(); }}>
             <IoClose />
-          </div>
+          </button>
         </div>
 
-        <div className="nav__toggle" id="nav-toggle" onClick={toggleMenu}>
+        <button type="button" ref={menuToggle} aria-label="Open navigation" aria-expanded={showMenu} aria-controls="nav-menu" className="nav__toggle" id="nav-toggle" onClick={toggleMenu}>
           <IoMenu />
-        </div>
+        </button>
       </nav>
     </header>
   );

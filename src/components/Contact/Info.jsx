@@ -1,304 +1,49 @@
 import React, { useState } from "react";
-import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
-import "./styles.css";
-import {
-	Box,
-	TextField,
-	MenuItem,
-	Button,
-	CircularProgress,
-} from "@mui/material";
-
 import axios from "axios";
+import { Footer, SocialLinks } from "../Shared/Sections";
+import "./page.css";
 
-import Footer from "../Footer/Footer";
+const initialValues = { fullName: "", emailAddress: "", phoneNumber: "", organization: "", subject: "", message: "", contactMethod: "email", howHeard: "" };
+const subjects = [["general", "General Inquiry"], ["volunteer", "Volunteer"], ["speaking", "Speaking Engagements"], ["workshops", "Workshops and Training"], ["media", "Media Requests"], ["partnership", "Partnership Opportunities"], ["other", "Other"]];
 
-import {toast } from "react-toastify";
-
-
-const inquiryOptions = [
-	{ value: "general", label: "General Inquiry" },
-	{ value: "volunteer", label: "Volunteer" },
-	{ value: "speaking", label: "Speaking Engagements" },
-	{ value: "workshops", label: "Workshops and Training" },
-	{ value: "media", label: "Media Requests" },
-	{ value: "partnership", label: "Partnership Opportunities" },
-	{ value: "other", label: "Other" },
-];
-
-const contactMethods = [
-	{ value: "email", label: "Email" },
-	{ value: "phone", label: "Phone" },
-	{ value: "either", label: "Either" },
-];
-
-const referralSources = [
-	{ value: "search", label: "Search Engine" },
-	{ value: "social", label: "Social Media" },
-	{ value: "referral", label: "Referral" },
-	{ value: "event", label: "Event/Conference" },
-	{ value: "other", label: "Other" },
-];
-
-const Info = () => {
-	const initialFormData = {
-		fullName: "",
-		emailAddress: "",
-		phoneNumber: "",
-		organization: "",
-		subject: "",
-		message: "",
-		contactMethod: "",
-		howHeard: "",
-	};
-
-	const [formData, setFormData] = useState(initialFormData);
-	const [loading, setLoading] = useState(false);
-
-	const handleChange = (e) => {
-		setFormData({ ...formData, [e.target.name]: e.target.value });
-	};
-
-	const handleSubmit = async (e) => {
-		e.preventDefault();
-		setLoading(true);
-
-		try {
-			const response = await axios.post(
-				"https://seyi-adisa-backend.onrender.com/api/contact",
-				formData,
-			);
-			toast.success("Message sent successfully!");
-			setFormData(initialFormData); // Clear the form
-			setLoading(false);
-			window.scrollTo(0, 0);
-		} catch (error) {
-			toast.error("Failed to send message. Please try again.");
-			setLoading(false);
-		}
-	};
-	return (
-		<>
-			<div className="contact-us-container">
-				<p className="contact-us">CONTACT US</p>
-				<h1>Let’s Start a Conversation</h1>
-				<p className="desc">
-					Ready to take the next step? Whether you have questions, need
-					guidance, or want to discuss a project, we're here to help. Let's
-					connect and explore how we can work together to achieve your goals.
-				</p>
-
-				<div
-					className="form_info_container"
-					data-aos="fade-up"
-					data-aos-duration="1000"
-				>
-					<div className="info-card">
-						<div className="box">
-							<p className="heading">Social Presence</p>
-							<hr />
-							<div className="icon-container">
-								<a
-									href="https://web.facebook.com/officialseyiadisa/?_rdc=1&_rdr"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									<FaFacebook className="social-icon" />
-								</a>
-								<a
-									href="https://www.instagram.com/seyiadisa_/"
-									target="_blank"
-									rel="noopener noreferrer"
-									className="social-icon"
-								>
-									<FaInstagram />
-								</a>
-								<a
-									href="https://x.com/sjadisa?s=11"
-									target="_blank"
-									rel="noopener noreferrer"
-									className="social-icon"
-								>
-									<FaTwitter />
-								</a>
-								<a
-									href="https://www.linkedin.com/in/seyiadisa/"
-									target="_blank"
-									rel="noopener noreferrer"
-									className="social-icon"
-								>
-									<FaLinkedin />
-								</a>
-							</div>
-
-							{/* <p className="low">I Reply typically within a day </p> */}
-						</div>
-						<div className="box">
-							<p className="heading">Contact Us</p>
-							<hr />
-							<p className="bright">+234 8132 412 749</p>
-							<p className="low">hello@seyiadisa.com</p>
-						</div>
-					</div>
-
-					<div className="form-container">
-						<Box
-							component="form"
-							sx={{ display: "flex", flexDirection: "column", gap: 2 }}
-							onSubmit={handleSubmit}
-						>
-							<TextField
-								fullWidth
-								sx={{
-									"& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
-										{ borderColor: "#000041" },
-									"& .MuiInputLabel-outlined.Mui-focused": { color: "#000041" },
-								}}
-								label="Full Name"
-								variant="outlined"
-								required
-								name="fullName"
-								value={formData.fullName}
-								onChange={handleChange}
-							/>
-							<TextField
-								sx={{
-									"& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
-										{ borderColor: "#000041" },
-									"& .MuiInputLabel-outlined.Mui-focused": { color: "#000041" },
-								}}
-								label="Email Address"
-								variant="outlined"
-								required
-								type="email"
-								name="emailAddress"
-								value={formData.emailAddress}
-								onChange={handleChange}
-							/>
-							<TextField
-								sx={{
-									"& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
-										{ borderColor: "#000041" },
-									"& .MuiInputLabel-outlined.Mui-focused": { color: "#000041" },
-								}}
-								label="Phone Number"
-								variant="outlined"
-								type="tel"
-								name="phoneNumber"
-								value={formData.phoneNumber}
-								onChange={handleChange}
-							/>
-							<TextField
-								sx={{
-									"& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
-										{ borderColor: "#000041" },
-									"& .MuiInputLabel-outlined.Mui-focused": { color: "#000041" },
-								}}
-								label="Organization/Company"
-								variant="outlined"
-								name="organization"
-								value={formData.organization}
-								onChange={handleChange}
-							/>
-							<TextField
-								select
-								label="Subject of Inquiry"
-								variant="outlined"
-								required
-								sx={{
-									"& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
-										{ borderColor: "#000041" },
-									"& .MuiInputLabel-outlined.Mui-focused": { color: "#000041" },
-								}}
-								name="subject"
-								value={formData.subject}
-								onChange={handleChange}
-							>
-								{inquiryOptions.map((option) => (
-									<MenuItem key={option.value} value={option.value}>
-										{option.label}
-									</MenuItem>
-								))}
-							</TextField>
-							<TextField
-								sx={{
-									"& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
-										{ borderColor: "#000041" },
-									"& .MuiInputLabel-outlined.Mui-focused": { color: "#000041" },
-								}}
-								label="Message"
-								variant="outlined"
-								multiline
-								rows={4}
-								placeholder="Please provide details about your inquiry."
-								required
-								name="message"
-								value={formData.message}
-								onChange={handleChange}
-							/>
-							<TextField
-								select
-								label="Preferred Method of Contact"
-								variant="outlined"
-								required
-								sx={{
-									"& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
-										{ borderColor: "#000041" },
-									"& .MuiInputLabel-outlined.Mui-focused": { color: "#000041" },
-								}}
-								name="contactMethod"
-								value={formData.contactMethod}
-								onChange={handleChange}
-							>
-								{contactMethods.map((option) => (
-									<MenuItem key={option.value} value={option.value}>
-										{option.label}
-									</MenuItem>
-								))}
-							</TextField>
-							<TextField
-								select
-								label="How Did You Hear About Us?"
-								variant="outlined"
-								sx={{
-									"& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
-										{ borderColor: "#000041" },
-									"& .MuiInputLabel-outlined.Mui-focused": { color: "#000041" },
-								}}
-								name="howHeard"
-								value={formData.howHeard}
-								onChange={handleChange}
-							>
-								{referralSources.map((source) => (
-									<MenuItem key={source.value} value={source.value}>
-										{source.label}
-									</MenuItem>
-								))}
-							</TextField>
-							{/* <Typography variant="body2" color="textSecondary">
-								[CAPTCHA or reCAPTCHA]
-							</Typography> */}
-							<Button
-								sx={{
-									backgroundColor: "#C8A500",
-									fontWeight: "700",
-									"&:hover": { opacity: "90%", background: '#C8A500' },
-								}}
-								variant="contained"
-								color="primary"
-								type="submit"
-								disabled={loading}
-							>
-								{loading ? <CircularProgress size={"24px"} /> : "Submit"}
-							</Button>
-
-						</Box>
-					</div>
-				</div>
-			</div>
-			<Footer />
-		</>
-	);
-};
-
-export default Info;
+export default function Info() {
+  const [values, setValues] = useState(initialValues);
+  const [busy, setBusy] = useState(false);
+  const [status, setStatus] = useState("");
+  const change = event => setValues(previous => ({ ...previous, [event.target.name]: event.target.value }));
+  async function submit(event) {
+    event.preventDefault();
+    if (busy) return;
+    setBusy(true); setStatus("");
+    try {
+      await axios.post("https://seyi-adisa-backend.onrender.com/api/contact", values, { timeout: 20000 });
+      setStatus("Message sent successfully. Thank you for getting in touch!");
+      setValues(initialValues);
+    } catch { setStatus("We couldn’t send your message. Please try again, or email hello@seyiadisa.com."); }
+    finally { setBusy(false); }
+  }
+  return <>
+    <section className="contact-page" aria-labelledby="contact-title"><div className="contact-page__inner">
+      <header className="contact-page__heading"><p className="contact-page__label">CONTACT US</p><h1 id="contact-title">Let’s Start a Conversation</h1><p>Ready to take the next step? Whether you have questions, need guidance, or want to discuss a project, we're here to help. Let's connect and explore how we can work together to achieve your goals.</p></header>
+      <div className="contact-page__grid">
+        <aside className="contact-page__details" aria-labelledby="contact-details-title"><h2 id="contact-details-title">Get in touch</h2><p>Have a question or an idea to share? Send a message or reach us directly.</p><div><h3>Email</h3><a href="mailto:hello@seyiadisa.com">hello@seyiadisa.com</a></div><div><h3>Phone</h3><a href="tel:+2348132412749">+234 8132 412 749</a></div><p className="contact-page__hint">For speaking invitations, workshops, partnerships, volunteering, and general enquiries.</p></aside>
+        <form className="contact-page__form" onSubmit={submit} aria-labelledby="message-title">
+          <h2 id="message-title">Send a message</h2><p className="contact-page__note">Fields marked * are required.</p>
+          <fieldset disabled={busy}><legend className="contact-page__sr-only">Your enquiry details</legend><div className="contact-page__fields">
+            <label>Full name *<input name="fullName" autoComplete="name" value={values.fullName} onChange={change} required maxLength={150} /></label>
+            <label>Email address *<input name="emailAddress" type="email" autoComplete="email" value={values.emailAddress} onChange={change} required /></label>
+            <label>Phone number{values.contactMethod === "phone" ? " *" : " (optional)"}<input name="phoneNumber" type="tel" autoComplete="tel" value={values.phoneNumber} onChange={change} required={values.contactMethod === "phone"} /></label>
+            <label>Organization / Company (optional)<input name="organization" autoComplete="organization" value={values.organization} onChange={change} maxLength={200} /></label>
+            <label className="contact-page__full">Subject of inquiry *<select aria-label="Subject of inquiry *" name="subject" value={values.subject} onChange={change} required><option value="" disabled>Select an enquiry type</option>{subjects.map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select></label>
+            <label className="contact-page__full">Message *<textarea name="message" rows={6} placeholder="Please provide details about your inquiry." value={values.message} onChange={change} required maxLength={10000} /></label>
+            <label>Preferred contact method *<select aria-label="Preferred contact method *" name="contactMethod" value={values.contactMethod} onChange={change} required><option value="email">Email</option><option value="phone">Phone</option><option value="either">Either</option></select></label>
+            <label>How did you hear about us? (optional)<select aria-label="How did you hear about us? (optional)" name="howHeard" value={values.howHeard} onChange={change}><option value="">Select an option</option>{[["search", "Search Engine"], ["social", "Social Media"], ["referral", "Referral"], ["event", "Event / Conference"], ["other", "Other"]].map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select></label>
+          </div></fieldset>
+          <button type="submit" disabled={busy}>{busy ? "Sending…" : "Send message"}</button><p className="contact-page__status" role="status">{status}</p>
+        </form>
+      </div>
+    </div></section>
+    <SocialLinks />
+    <Footer />
+  </>;
+}

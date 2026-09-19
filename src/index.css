@@ -56,3 +56,13 @@ a {
 .mt {
 	margin-top: 3rem;
 }
+
+/* Keep keyboard focus visible without changing the site's visual identity. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--button-color);
+  outline-offset: 4px;
+}

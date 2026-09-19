@@ -1,18 +1,17 @@
 import React from "react";
-import "./styles.css";
+import "./page.css";
 
 import img from "../../Assets/hello-friends.jpeg";
 
 const Welcome = () => {
 	return (
 		<>
-			<div className="welcome-container">
+			<section className="community-welcome">
+        <div className="community-page-inner community-welcome__grid">
 				<div
-					className="welcome-text"
-					data-aos="fade-right"
-					data-aos-duration="1000"
+					className="community-welcome__text"
 				>
-					{/* <h1 className="title">Hello Friend,</h1> */}
+					<h2>Connecting with Our Community</h2>
 					<p className="description">
 						Engaging with the community is at the heart of my mission. I believe in creating platforms that encourage the development of people and communities through active participation, fostering a sense of belonging among individuals and groups. My initiatives are designed to empower people, enhance civic responsibility, and promote collaborative problem-solving.
 					</p>
@@ -24,10 +23,11 @@ const Welcome = () => {
 						active and engaged citizens.
 					</p>
 				</div>
-				<div className="welcome-picture">
-					<img src={img} alt="image lodaing..." />
+				<div className="community-welcome__photo">
+					<img src={img} alt="Seyi Adisa meeting a community representative" loading="lazy" />
 				</div>
-			</div>
+        </div>
+			</section>
 		</>
 	);
 };

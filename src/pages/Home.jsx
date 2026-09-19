@@ -1,15 +1,11 @@
 import React from "react";
+import ClosingSections from "../components/Home/ClosingSections";
 import Hero from "../components/Home/Hero";
 import KeyAchievements from "../components/Home/KeyAchievements";
 import About from "../components/Home/About";
 import Achievements from "../components/Home/Achievements";
-import MediaAppearances from "../components/Resources/MediaAppearances";
+import MediaAppearances from "../components/Home/MediaAppearances";
 import Blog from "../components/Home/Blog";
-import Testimonial from "../components/About/Testimonial";
-import NewsLetter from "../components/Community/NewsLetter";
-import SociaMedia from "../components/Community/SociaMedia";
-import UpcomingEvents from "../components/Services/UpcomingEvents";
-import Footer from "../components/Footer/Footer";
 
 // media query
 import '../utils/mediaQuery.css'
@@ -23,12 +19,7 @@ const Home = () => {
 			<Blog />
 			<MediaAppearances />
 			{/* <KeyAchievements /> */}
-			<Testimonial />
-			{/* <div className="mt"></div> */}
-			<NewsLetter />
-			<SociaMedia />
-			<UpcomingEvents />
-			<Footer />
+			<ClosingSections />
 		</div>
 	);
 };

@@ -7,7 +7,7 @@ import { Avatar } from "@mui/material";
 
 import tinuImg from '../../Assets/tinu.jpg'
 
-const testimonials = [
+export const testimonials = [
 			{
 		text: "Attending the 7-Eleven Foundation was a game-changer for my entrepreneurial journey. The comprehensive program equipped me with essential skills in different areas that are pivotal to the growth of my business, the well-structured lectures in classes like marketing, branding, financial management, networking, customer service e.t.c ",
 		author: "Tinu",

@@ -1,21 +1,16 @@
 import React from 'react';
-import "./styles.css";
-import { useNavigate } from 'react-router-dom';
+import "./page.css";
+import { Link } from 'react-router-dom';
 
 const GetInvolvedSection = () => {
-  const navigate = useNavigate()
-  const volunteerNow = () => {
-    navigate('/contact')
-  };
+
 
   return (
-    <section className="get-involved-section">
+    <section className="community-involvement">
       <div
-        className="get-involved-container"
-        data-aos="fade-up"
-        data-aos-duration="1000"
+        className="community-page-inner"
       >
-        <h1 className="title">How to Get Involved</h1>
+        <h2>How to Get Involved</h2>
         <p className="description">
           We welcome you to join our efforts in making a difference. Whether you
           are interested in attending a forum, participating in a workshop, or
@@ -27,7 +22,7 @@ const GetInvolvedSection = () => {
           Together, we can drive positive change and build a brighter future for
           our communities.
         </p>
-        <button className="volunteer-button" onClick={volunteerNow}>Volunteer Now</button>
+        <Link className="community-button" to="/contact">Volunteer Now</Link>
       </div>
     </section>
   );

@@ -2,8 +2,8 @@ import React from "react";
 import Hero from "../components/About/Hero";
 import Mission from "../components/About/Mission";
 import Biography from "../components/About/Biography";
-import Testimonial from "../components/About/Testimonial";
-import Footer from "../components/Footer/Footer";
+import { Testimonials, Newsletter, Footer } from "../components/Shared/Sections";
+
 
 
 // media query
@@ -15,7 +15,8 @@ const About = () => {
 			<Hero />
 			<Mission />
 			<Biography />
-			<Testimonial />
+			<Testimonials />
+            <Newsletter />
 			<Footer />
 		</div>
 	);

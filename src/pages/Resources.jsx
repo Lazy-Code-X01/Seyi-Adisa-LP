@@ -2,8 +2,8 @@ import React from "react";
 import Hero from "../components/Resources/Hero";
 import Blog from "../components/Resources/Blog";
 import Publications from "../components/Resources/Publications";
-import MediaAppearances from "../components/Resources/MediaAppearances";
-import Footer from "../components/Footer/Footer";
+import MediaAppearances from "../components/Shared/MediaAppearances";
+import { Newsletter, Footer } from "../components/Shared/Sections";
 
 
 // media query
@@ -15,7 +15,8 @@ const Resources = () => {
 			<Blog />
 			<Publications />
 			<MediaAppearances />
-			<Footer />
+			<Newsletter />
+            <Footer />
 		</div>
 	);
 };

@@ -1,11 +1,8 @@
 import React from "react";
+import { Newsletter, SocialLinks, Events, Footer } from "../components/Shared/Sections";
 import Hero from "../components/Community/Hero";
 import Welcome from "../components/Community/Welcome";
 import Initaitives from "../components/Community/Initaitives";
-import SociaMedia from "../components/Community/SociaMedia";
-import UpcomingEvents from "../components/Services/UpcomingEvents";
-import NewsLetter from "../components/Community/NewsLetter";
-import Footer from "../components/Footer/Footer";
 
 
 // media query
@@ -18,9 +15,9 @@ const Community = () => {
 			<Welcome />
 			<Initaitives />
 			<GetInvolvedSection />
-			<NewsLetter />
-			<SociaMedia />
-			<UpcomingEvents />
+			<Newsletter />
+			<SocialLinks />
+			<Events />
 			<Footer />
 		</div>
 	);
